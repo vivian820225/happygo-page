@@ -135,7 +135,7 @@ body {
 }
 
 .topbar::after {
-  content: '';
+  content: "";
   display: table;
   clear: both;
 }
@@ -507,26 +507,28 @@ h3 {
   text-align: right;
 }
 
-#main .info-block li {
-  padding-bottom: 10px;
+#main td {
+  text-align: right;
 }
 
-#main .circle {
+#main td:nth-child(3) {
+  text-align: left;
+}
+
+.circle {
   margin: 0 10px;
   padding: 0 8px 2px 8px;
   background-color: #ef8b4a;
   border-radius: 50%;
 }
 
-#main .highlight {
+.highlight {
   margin-right: 10px;
-  position: relative;
-  top: 4px;
   color: #f4ba1d;
   font-size: 5rem;
 }
 
-#main h5 {
+h5 {
   max-width: 340px;
   margin: 0 auto;
   margin-bottom: 20px;
@@ -543,7 +545,7 @@ h3 {
   -webkit-transform: translateY(-50%);
 }
 
-#main .link {
+.link {
   display: inline-block;
   padding: 4px 20px;
   color: #fff;
@@ -558,7 +560,7 @@ h3 {
   transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
 }
 
-#main .link i {
+.link i {
   display: inline-block;
   width: 10px;
   position: relative;
@@ -567,12 +569,12 @@ h3 {
           transform: translateY(-50%);
 }
 
-#main .link i img {
+.link i img {
   display: block;
 }
 
-#main .link::before, #main .link::after {
-  content: '';
+.link::before, .link::after {
+  content: "";
   display: block;
   width: 200px;
   height: 1px;
@@ -585,7 +587,7 @@ h3 {
   transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
 }
 
-#main .link::before {
+.link::before {
   top: 0;
   left: 50%;
   -webkit-transform-origin: 100% 50%;
@@ -594,7 +596,7 @@ h3 {
           transform: translateX(-50%);
 }
 
-#main .link::after {
+.link::after {
   bottom: 0;
   left: 50%;
   -webkit-transform-origin: 0% 50%;
@@ -603,17 +605,17 @@ h3 {
           transform: translateX(-50%);
 }
 
-#main .link:hover {
+.link:hover {
   -webkit-transform: translateX(-5px);
           transform: translateX(-5px);
 }
 
-#main .link:hover::before {
+.link:hover::before {
   -webkit-transform: translateX(-52%) scale(1.1);
           transform: translateX(-52%) scale(1.1);
 }
 
-#main .link:hover::after {
+.link:hover::after {
   -webkit-transform: translateX(-42%) scale(1.1);
           transform: translateX(-42%) scale(1.1);
 }
@@ -701,7 +703,7 @@ h3 {
 }
 
 #period .link::before, #period .link::after {
-  content: '';
+  content: "";
   display: block;
   width: 400px;
   height: 1px;
@@ -1578,7 +1580,7 @@ footer {
 }
 
 .popup .btn-close::before {
-  content: '';
+  content: "";
   display: block;
   width: 48px;
   height: 3px;
@@ -1591,7 +1593,7 @@ footer {
 }
 
 .popup .btn-close::after {
-  content: '';
+  content: "";
   display: block;
   width: 48px;
   height: 3px;
