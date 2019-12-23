@@ -89,6 +89,8 @@ body {
   position: fixed;
   right: 20px;
   top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
   z-index: 5;
 }
 
@@ -379,30 +381,22 @@ h3 {
   position: relative;
 }
 
-#main::before {
-  content: url(../images/pattern-01.svg);
-  display: block;
-  width: 250px;
-  height: 250px;
+#main .bg-pattern {
+  display: inline-block;
   position: absolute;
-  top: 280px;
-  right: -60px;
   z-index: 1;
   -webkit-animation: fade 1.5s infinite alternate;
           animation: fade 1.5s infinite alternate;
 }
 
-#main::after {
-  content: url(../images/pattern-02.svg);
-  display: block;
-  width: 360px;
-  height: 360px;
-  position: absolute;
+#main .bg-pattern:nth-child(1) {
+  top: 280px;
+  right: -60px;
+}
+
+#main .bg-pattern:nth-child(2) {
   bottom: 180px;
   left: -180px;
-  z-index: 1;
-  -webkit-animation: fade 2s infinite alternate;
-          animation: fade 2s infinite alternate;
   -webkit-animation-delay: 0.8s;
           animation-delay: 0.8s;
 }
@@ -452,6 +446,7 @@ h3 {
 }
 
 #main .title-block {
+  margin-bottom: 20px;
   padding-top: 10px;
 }
 
@@ -524,6 +519,8 @@ h3 {
 
 #main .highlight {
   margin-right: 10px;
+  position: relative;
+  top: -6px;
   color: #f4ba1d;
   font-size: 5rem;
 }
@@ -532,7 +529,7 @@ h3 {
   max-width: 340px;
   margin: 0 auto;
   margin-bottom: 20px;
-  padding: 4px 10px;
+  padding: 4px 10px 6px 10px;
   color: #fff;
   background-color: #1170b3;
   font-size: 1.3rem;
@@ -626,6 +623,31 @@ h3 {
   text-align: center;
 }
 
+#period .bg-pattern {
+  display: inline-block;
+  position: absolute;
+  z-index: 1;
+  -webkit-animation: fade 1.5s infinite alternate;
+          animation: fade 1.5s infinite alternate;
+}
+
+#period .bg-pattern:nth-child(1) {
+  top: -12%;
+  right: 15%;
+}
+
+#period .bg-pattern:nth-child(2) {
+  top: 52%;
+  left: 20%;
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+}
+
+#period .bg-pattern:nth-child(3) {
+  bottom: -40%;
+  right: 0;
+}
+
 #period .container {
   border: 2px solid #fff;
 }
@@ -657,7 +679,7 @@ h3 {
   max-width: 340px;
   margin: 0 auto;
   margin-bottom: 20px;
-  padding: 4px 10px;
+  padding: 4px 10px 6px 10px;
   color: #fff;
   background-color: #f4ba1d;
   font-size: 1.3rem;
@@ -781,6 +803,7 @@ h3 {
 }
 
 #period .bank-container h4 {
+  padding: 20px;
   color: #fff;
   font-size: 2rem;
   font-weight: 700;
@@ -807,7 +830,7 @@ h3 {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  padding: 26px 10px 10px 10px;
+  padding: 35px 10px 0 10px;
   background-color: #fff;
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
@@ -820,18 +843,41 @@ h3 {
   padding: 2px;
 }
 
-#period .bank-container .banks li span {
-  font-size: 10px;
-}
-
 #period .bank-container .banks li img {
   display: block;
-  max-width: auto;
+  max-width: 112px;
   height: 36px;
+}
+
+#period .bank-container .banks li img.extra {
+  height: auto;
 }
 
 #pay {
   padding-bottom: 160px;
+}
+
+#pay .bg-pattern {
+  display: inline-block;
+  position: absolute;
+  z-index: 1;
+  -webkit-animation: fade 1.5s infinite alternate;
+          animation: fade 1.5s infinite alternate;
+}
+
+#pay .bg-pattern:nth-child(1) {
+  top: 3%;
+  left: 0;
+}
+
+#pay .bg-pattern:nth-child(2) {
+  top: 50%;
+  right: -200px;
+}
+
+#pay .bg-pattern:nth-child(3) {
+  bottom: 5%;
+  left: 16%;
 }
 
 #pay .block-bg {
@@ -1013,6 +1059,12 @@ h3 {
   height: 40px;
 }
 
+#pay .title-border img.big {
+  height: 80px;
+  -o-object-position: center -10px;
+     object-position: center -10px;
+}
+
 #pay .title-border.extra {
   padding: 0;
   display: -webkit-box;
@@ -1090,8 +1142,7 @@ h3 {
 }
 
 #pay blockquote {
-  margin: 20px;
-  margin-top: 0;
+  margin: 10px 20px;
   padding: 0 10px;
   border-left: 3px solid #f4ba1d;
   font-size: 1rem;
@@ -1111,6 +1162,30 @@ h3 {
   background-color: #f4ba1d;
   padding: 80px 0;
   padding-bottom: 20px;
+}
+
+#point .bg-pattern {
+  display: inline-block;
+  position: absolute;
+  z-index: 1;
+  -webkit-animation: fade 1.5s infinite alternate;
+          animation: fade 1.5s infinite alternate;
+}
+
+#point .bg-pattern:nth-child(1) {
+  top: 12%;
+  left: 0;
+}
+
+#point .bg-pattern:nth-child(2) {
+  width: 160px;
+  bottom: 20%;
+  right: -40px;
+}
+
+#point .bg-pattern:nth-child(3) {
+  bottom: 13%;
+  left: 6%;
 }
 
 #point .block-bg {
@@ -1239,6 +1314,29 @@ h3 {
   padding-top: 200px;
   padding-bottom: 260px;
   background-color: #d94114;
+}
+
+#life img {
+  max-width: 100%;
+}
+
+#life .bg-pattern {
+  display: inline-block;
+  position: absolute;
+  z-index: 1;
+  -webkit-animation: fade 1.5s infinite alternate;
+          animation: fade 1.5s infinite alternate;
+}
+
+#life .bg-pattern:nth-child(1) {
+  top: 21%;
+  left: 16%;
+}
+
+#life .bg-pattern:nth-child(2) {
+  width: 200px;
+  bottom: 15%;
+  left: 45%;
 }
 
 #life .block-bg {
@@ -1391,6 +1489,25 @@ h3 {
 #app {
   padding-bottom: 80px;
   background-color: #1170b3;
+}
+
+#app .bg-pattern {
+  display: inline-block;
+  width: 200px;
+  position: absolute;
+  z-index: 1;
+  -webkit-animation: fade 1.5s infinite alternate;
+          animation: fade 1.5s infinite alternate;
+}
+
+#app .bg-pattern:nth-child(1) {
+  bottom: 10%;
+  left: 5%;
+}
+
+#app .bg-pattern:nth-child(2) {
+  top: 0;
+  right: 5%;
 }
 
 #app h3 {

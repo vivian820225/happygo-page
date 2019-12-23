@@ -89,6 +89,7 @@ $orange: #d94114;
   position: fixed;
   right: 20px;
   top: 50%;
+  transform: translateY(-50%);
   z-index: 5;
   ul {
     width: 14px;
@@ -355,29 +356,20 @@ h3 {
 #main {
   text-align: center;
   position: relative;
-  &::before {
-    content: url(../images/pattern-01.svg);
-    display: block;
-    width: 250px;
-    height: 250px;
+  .bg-pattern {
+    display: inline-block;
     position: absolute;
-    top: 280px;
-    right: -60px;
     z-index: 1;
     animation: fade 1.5s infinite alternate;
-  }
-
-  &::after {
-    content: url(../images/pattern-02.svg);
-    display: block;
-    width: 360px;
-    height: 360px;
-    position: absolute;
-    bottom: 180px;
-    left: -180px;
-    z-index: 1;
-    animation: fade 2s infinite alternate;
-    animation-delay: 0.8s;
+    &:nth-child(1) {
+      top: 280px;
+      right: -60px;
+    }
+    &:nth-child(2) {
+      bottom: 180px;
+      left: -180px;
+      animation-delay: 0.8s;
+    }
   }
 
   .block-bg {
@@ -421,6 +413,7 @@ h3 {
   }
 
   .title-block {
+    margin-bottom: 20px;
     padding-top: 10px;
   }
 
@@ -473,7 +466,7 @@ h3 {
   }
   td {
     text-align: right;
-    &:nth-child(3){
+    &:nth-child(3) {
       text-align: left;
     }
   }
@@ -483,18 +476,20 @@ h3 {
     background-color: #ef8b4a;
     border-radius: 50%;
   }
-  
+
   .highlight {
     margin-right: 10px;
+    position: relative;
+    top: -6px;
     color: $yellow;
     font-size: 5rem;
   }
-  
+
   h5 {
     max-width: 340px;
     margin: 0 auto;
     margin-bottom: 20px;
-    padding: 4px 10px;
+    padding: 4px 10px 6px 10px;;
     color: $white;
     background-color: #1170b3;
     font-size: 1.3rem;
@@ -505,7 +500,7 @@ h3 {
     transform: translateY(-50%);
     -webkit-transform: translateY(-50%);
   }
-  
+
   .link {
     display: inline-block;
     padding: 4px 20px;
@@ -543,21 +538,21 @@ h3 {
       -ms-transition: transform 0.3s ease-in-out;
       transition: transform 0.3s ease-in-out;
     }
-  
+
     &::before {
       top: 0;
       left: 50%;
       transform-origin: 100% 50%;
       transform: translateX(-50%);
     }
-  
+
     &::after {
       bottom: 0;
       left: 50%;
       transform-origin: 0% 50%;
       transform: translateX(-50%);
     }
-  
+
     &:hover {
       transform: translateX(-5px);
       &::before {
@@ -570,11 +565,29 @@ h3 {
   }
 }
 
-
 #period {
   padding: 20px 0;
   background-color: $yellow;
   text-align: center;
+  .bg-pattern {
+    display: inline-block;
+    position: absolute;
+    z-index: 1;
+    animation: fade 1.5s infinite alternate;
+    &:nth-child(1) {
+      top: -12%;
+      right: 15%;
+    }
+    &:nth-child(2) {
+      top: 52%;
+      left: 20%;
+      animation-delay: 0.2s;
+    }
+    &:nth-child(3) {
+      bottom: -40%;
+      right: 0;
+    }
+  }
   .container {
     border: 2px solid $white;
   }
@@ -604,7 +617,7 @@ h3 {
     max-width: 340px;
     margin: 0 auto;
     margin-bottom: 20px;
-    padding: 4px 10px;
+    padding: 4px 10px 6px 10px;;
     color: $white;
     background-color: $yellow;
     font-size: 1.3rem;
@@ -702,6 +715,7 @@ h3 {
     }
 
     h4 {
+      padding: 20px;
       color: $white;
       font-size: 2rem;
       font-weight: 700;
@@ -718,7 +732,7 @@ h3 {
       -ms-flex-flow: row nowrap;
       justify-content: space-between;
       align-items: flex-start;
-      padding: 26px 10px 10px 10px;
+      padding: 35px 10px 0 10px;
       background-color: $white;
       border-top-right-radius: 10px;
       border-bottom-right-radius: 10px;
@@ -726,13 +740,13 @@ h3 {
       li {
         display: inline-block;
         padding: 2px;
-        span {
-          font-size: 10px;
-        }
         img {
           display: block;
-          max-width: auto;
+          max-width: 112px;
           height: 36px;
+          &.extra {
+            height: auto;
+          }
         }
       }
     }
@@ -741,6 +755,25 @@ h3 {
 
 #pay {
   padding-bottom: 160px;
+  .bg-pattern {
+    display: inline-block;
+    position: absolute;
+    z-index: 1;
+    animation: fade 1.5s infinite alternate;
+    &:nth-child(1) {
+      top: 3%;
+      left: 0;
+    }
+    &:nth-child(2) {
+      top: 50%;
+      right: -200px;
+    }
+    &:nth-child(3) {
+      bottom: 5%;
+      left: 16%;
+    }
+  }
+
   .block-bg {
     position: absolute;
     top: -1px;
@@ -759,6 +792,7 @@ h3 {
       transform: scaleX(-1);
     }
   }
+
   .container {
     padding-top: 140px;
   }
@@ -882,6 +916,10 @@ h3 {
         padding-top: 8px;
         height: 40px;
       }
+      &.big {
+        height: 80px;
+        object-position: center -10px;
+      }
     }
 
     &.extra {
@@ -947,8 +985,7 @@ h3 {
   }
 
   blockquote {
-    margin: 20px;
-    margin-top: 0;
+    margin: 10px 20px;
     padding: 0 10px;
     border-left: 3px solid $yellow;
     font-size: 1rem;
@@ -967,6 +1004,25 @@ h3 {
   background-color: #f4ba1d;
   padding: 80px 0;
   padding-bottom: 20px;
+  .bg-pattern {
+    display: inline-block;
+    position: absolute;
+    z-index: 1;
+    animation: fade 1.5s infinite alternate;
+    &:nth-child(1) {
+      top: 12%;
+      left: 0;
+    }
+    &:nth-child(2) {
+      width: 160px;
+      bottom: 20%;
+      right: -40px;
+    }
+    &:nth-child(3) {
+      bottom: 13%;
+      left: 6%;
+    }
+  }
   .block-bg {
     position: absolute;
     bottom: 0;
@@ -1075,6 +1131,24 @@ h3 {
   padding-top: 200px;
   padding-bottom: 260px;
   background-color: $orange;
+  img{
+    max-width: 100%;
+  }
+  .bg-pattern {
+    display: inline-block;
+    position: absolute;
+    z-index: 1;
+    animation: fade 1.5s infinite alternate;
+    &:nth-child(1) {
+      top: 21%;
+      left: 16%;
+    }
+    &:nth-child(2) {
+      width: 200px;
+      bottom: 15%;
+      left: 45%;
+    }
+  }
   .block-bg {
     position: absolute;
     top: -1px;
@@ -1208,6 +1282,21 @@ h3 {
 #app {
   padding-bottom: 80px;
   background-color: #1170b3;
+  .bg-pattern {
+    display: inline-block;
+    width: 200px;
+    position: absolute;
+    z-index: 1;
+    animation: fade 1.5s infinite alternate;
+    &:nth-child(1) {
+      bottom: 10%;
+      left: 5%;
+    }
+    &:nth-child(2) {
+      top: 0;
+      right: 5%;
+    }
+  }
   h3 {
     margin-bottom: 30px;
     color: $yellow;
