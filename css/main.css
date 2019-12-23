@@ -515,20 +515,20 @@ h3 {
   text-align: left;
 }
 
-.circle {
+#main .circle {
   margin: 0 10px;
   padding: 0 8px 2px 8px;
   background-color: #ef8b4a;
   border-radius: 50%;
 }
 
-.highlight {
+#main .highlight {
   margin-right: 10px;
   color: #f4ba1d;
   font-size: 5rem;
 }
 
-h5 {
+#main h5 {
   max-width: 340px;
   margin: 0 auto;
   margin-bottom: 20px;
@@ -545,7 +545,7 @@ h5 {
   -webkit-transform: translateY(-50%);
 }
 
-.link {
+#main .link {
   display: inline-block;
   padding: 4px 20px;
   color: #fff;
@@ -560,7 +560,7 @@ h5 {
   transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
 }
 
-.link i {
+#main .link i {
   display: inline-block;
   width: 10px;
   position: relative;
@@ -569,11 +569,11 @@ h5 {
           transform: translateY(-50%);
 }
 
-.link i img {
+#main .link i img {
   display: block;
 }
 
-.link::before, .link::after {
+#main .link::before, #main .link::after {
   content: "";
   display: block;
   width: 200px;
@@ -587,7 +587,7 @@ h5 {
   transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
 }
 
-.link::before {
+#main .link::before {
   top: 0;
   left: 50%;
   -webkit-transform-origin: 100% 50%;
@@ -596,7 +596,7 @@ h5 {
           transform: translateX(-50%);
 }
 
-.link::after {
+#main .link::after {
   bottom: 0;
   left: 50%;
   -webkit-transform-origin: 0% 50%;
@@ -605,17 +605,17 @@ h5 {
           transform: translateX(-50%);
 }
 
-.link:hover {
+#main .link:hover {
   -webkit-transform: translateX(-5px);
           transform: translateX(-5px);
 }
 
-.link:hover::before {
+#main .link:hover::before {
   -webkit-transform: translateX(-52%) scale(1.1);
           transform: translateX(-52%) scale(1.1);
 }
 
-.link:hover::after {
+#main .link:hover::after {
   -webkit-transform: translateX(-42%) scale(1.1);
           transform: translateX(-42%) scale(1.1);
 }
@@ -1199,7 +1199,7 @@ h5 {
   overflow: hidden;
 }
 
-#point .link-wrapper .link {
+#point .link-wrapper a {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 50%;
           flex: 1 1 50%;
@@ -1212,7 +1212,7 @@ h5 {
   position: relative;
 }
 
-#point .link-wrapper .link::after {
+#point .link-wrapper a::after {
   content: "";
   display: block;
   width: 0;
@@ -1227,11 +1227,11 @@ h5 {
   right: 30%;
 }
 
-#point .link-wrapper .link:first-child {
+#point .link-wrapper a:first-child {
   background-color: #1170b3;
 }
 
-#point .link-wrapper .link:nth-child(2) {
+#point .link-wrapper a:nth-child(2) {
   background-color: #d94114;
 }
 
