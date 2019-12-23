@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HAPPY GO Pay</title>
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC:300,500,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="https://www.happygocard.com.tw/official/event/HAPPYGOAPP/js/jquery-latest.min.js"></script>
+    <script type="text/javascript" src="https://www.happygocard.com.tw/official/event/HAPPYGOAPP/HAPPYGOPay/Scripts/greensock/TweenMax.min.js"></script>
+    <script type="text/javascript" src="https://www.happygocard.com.tw/official/event/HAPPYGOAPP/HAPPYGOPay/Scripts/greensock/TweenLite.min.js"></script>
+</head>
+
+<body>
+    <div class="icon_top"></div>
+    <div class="navigation_r">
+        <ul>
+            <li><a href="#main" class="color"></a></li>
+            <li><a href="#period"></a></li>
+            <li><a href="#pay"></a></li>
+            <li><a href="#point"></a></li>
+            <li><a href="#lift"></a></li>
+            <li><a href="#app"></a></li>
+        </ul>
+    </div>
+    <div class="popup" id="event-time">
+        <div class="pop-overlay"></div>
+        <div class="pop-container">
+            <div class="btn-close"></div>
+            <h2>十大通路<span>20</span>倍檔期 回饋時間表</h2>
+            <div class="content-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>各大通路</th>
+                            <th>檔期時間</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>遠東百貨</td>
+                            <td>1/10~1/22</td>
+                        </tr>
+                        <tr>
+                            <td>遠東SOGO</td>
+                            <td>1/10~1/24</td>
+                        </tr>
+                        <tr>
+                            <td>Big City</td>
+                            <td>1/10~1/24</td>
+                        </tr>
+                        <tr>
+                            <td>City'Super</td>
+                            <td>1/10~1/24
+                                <b>台中大遠百、板橋大遠百、信義遠百、遠東SOGO</b>
+                                1/10~1/24
+                                <b>SOGO天母店、SOGO復興館、巨城購物中心</b>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>The Mall</td>
+                            <td>1/18~2/1</td>
+                        </tr>
+                        <tr>
+                            <td>遠傳電信</td>
+                            <td>1/10~1/24</td>
+                        </tr>
+                        <tr>
+                            <td>香格里拉台北遠東國際大飯店</td>
+                            <td>1/10~1/24</td>
+                        </tr>
+                        <tr>
+                            <td>香格里拉台南遠東國際大飯店</td>
+                            <td>1/10~1/24</td>
+                        </tr>
+                        <tr>
+                            <td>Mega50</td>
+                            <td>1/10~1/24</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    
+
+    <header class="topbar">
+        <div class="logo"><img src="images/logo.svg" alt=""></div>
+        <label for="menu" class="menu-icon"><span></span></label>
+        <input type="checkbox" name="menu-btn" id="menu">
+        <div class="overlay">
+            <label for="menu" class="close-icon"><span></span></label>
+            <nav class="main-menu">
+                <ul>
+                    <li><a href="javascript:;" target="_blank">立即下載HAPPY GO App</a></li>
+                    <li><a href="#main">單筆滿額贈</a></li>
+                    <li><a href="#period">財鼠報喜 期間限定</a></li>
+                    <li><a href="#pay">百貨樂Pay 優惠不停</a></li>
+                    <li><a href="#point">點金雙Pay 方便加倍</a></li>
+                    <li><a href="#life">速Pay生活圈</a></li>
+                    <li><a href="#app">會員限量專屬優惠</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="main-container">
+
+        <!-- 主題+單筆滿額 -->
+        <section class="section" id="main">
+
+            <div class="main-title">
+                <img src="images/main-title.svg" alt="">
+            </div>
+            <div class="content">
+                <div class="container">
+                    <h2 class="heading">單筆<span class="yellow">滿額</span>贈</h2>
+                    <div class="wrapper">
+                        <div class="col">
+                            <div class="title-block">
+                                <h3>百貨/電信/餐飲</h3>
+                            </div>
+                            <ul class="info-block">
+                                <li>滿2,000元<span class="circle">贈</span><span class="highlight">200</span>點</li>
+                                <li>滿5,000元<span class="circle">贈</span><span class="highlight">500</span>點</li>
+                                <li>滿15,000元<span class="circle">贈</span><span class="highlight">1,500</span>點</li>
+                                <li>滿50,000元<span class="circle">贈</span><span class="highlight">5,000</span>點</li>
+                            </ul>
+                        </div>
+                        <div class="col">
+                            <div class="title-block">
+                                <h3>量販</h3>
+                            </div>
+                            <ul class="info-block">
+                                <li>滿500元<span class="circle">贈</span><span class="highlight">50</span>點</li>
+                                <li>滿1,000元<span class="circle">贈</span><span class="highlight">100</span>點</li>
+                                <li>滿2,000元<span class="circle">贈</span><span class="highlight">200</span>點</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <h5>每卡每日限擇優回饋乙次</h5>
+                </div>
+                <a href="javascript:;" class="link">詳細活動辦法 <i><img src="images/icon-tri.svg" alt=""></i></a>
+            </div>
+
+
+            <div class="block-bg"><img src="images/tri-bg-1.png" alt=""></div>
+        </section>
+
+        <!-- 期間限定 -->
+        <section class="section" id="period">
+            <div class="content">
+                <div class="container">
+                    <h2>財鼠報喜<span class="yellow"> 期間限定</span></h2>
+                    <h3>點數瘋狂回饋<span>20</span>倍</h3>
+                </div>
+                <h5>含原單筆滿額送之10倍</h5>
+                <a href="javascript:eventTime()" class="link">各大通路<span>20</span>倍檔期 回饋時間表 <i><img src="images/icon-tri.svg" alt=""></i></a>
+
+                <div class="bank-container">
+                    <div class="title-block">
+                        <h4>適用<br />銀行</h4>
+                    </div>
+                    <ul class="banks">
+                        <li><img src="images/bank-01.png" alt=""></li>
+                        <li><img src="images/bank-02.png" alt=""></li>
+                        <li><img src="images/bank-03.png" alt=""></li>
+                        <li><img src="images/bank-04.png" alt=""></li>
+                        <li><img src="images/bank-05.png" alt=""></li>
+                        <li><img src="images/bank-06.png" alt=""></li>
+                        <li><img src="images/bank-07.png" alt=""><span>僅限玉山幸運PLUS鈦金卡</span></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- 優惠不停 -->
+        <section class="section" id="pay">
+            <div class="block-bg"><img src="images/tri-bg-1.png" alt=""></div>
+            <div class="block-bg-2"><img src="images/tri-bg-1.png" alt=""></div>
+            <div class="container">
+                <h2><span>百</span><span>貨</span><span>樂</span><span>Pay</span> <span class="orange">優</span><span class="orange">惠</span><span class="orange">不</span><span class="orange">停</span></h2>
+                <h4>百貨通路</h4>
+                <div class="wrapper">
+                    <div class="col">
+                        <div class="title-border"><img class="small" src="images/logo-FE.png" alt=""></div>
+                        <h6>高消費禮</h6>
+                        <p class="box-content">
+                            當日單筆消費<br />
+                            滿3萬<span class="circle">贈</span><span class="highlight">1,000</span>點<br />
+                            滿5萬<span class="circle">贈</span><span class="highlight">2,000</span>點<br />
+                            滿10萬<span class="circle">贈</span><span class="highlight">4,000</span>點<br />
+                            滿20萬<span class="circle">贈</span><span class="highlight">8,000</span>點
+                        </p>
+                        <blockquote>
+                            <ol>
+                                <li>每卡每日限領一次/擇一門檻兌換</li>
+                                <li>消費後次周五起由DDIM入點</li>
+                            </ol>
+                        </blockquote>
+                        <hr>
+                        <h6>消費抵用券</h6>
+                        <p class="box-content">
+                            單筆滿5,000元<span class="circle">贈</span><span class="highlight">200</span>元十足券
+                        </p>
+                        <blockquote>
+                            <p>* 1/1-4/1全館(含餐飲)十足抵用(部分專櫃除外)</p>
+                            <ol>
+                                <li>每人每日限領一次</li>
+                                <li>使用HAPPY GO Pay需至贈品處兌換</li>
+                            </ol>
+                        </blockquote>
+                    </div>
+                    <div class="col">
+                        <div class="title-border extra"><img class="small" src="images/logo-FE.png"
+                                alt=""><span>A13</span></div>
+                        <h6>週週來店禮</h6>
+                        <p class="box-content">
+                            單筆滿1,000元<span class="circle">贈</span><span class="highlight">100</span>點<br />
+                            <b>(每週限量500份 共1500份)</b>
+                        </p>
+                        <blockquote>
+                            <ol>
+                                <li>每週每人限領一次，單張發票恕不得與HAPPY GO卡友來店禮重覆恕無法兌換</li>
+                                <li>限時點數效期至109/6/30</li>
+                                <li>加贈點數於次週五入點</li>
+                            </ol>
+                        </blockquote>
+                        <hr>
+                        <h6>高消費禮</h6>
+                        <p class="box-content">
+                            當日單筆消費<br />
+                            滿3萬<span class="circle">贈</span><span class="highlight">1,000</span>點<br />
+                            滿5萬<span class="circle">贈</span><span class="highlight">2,000</span>點<br />
+                            滿10萬<span class="circle">贈</span><span class="highlight">4,000</span>點
+                        </p>
+                        <blockquote>
+                            <ol>
+                                <li>每人每日限領一次/擇一門檻兌換</li>
+                                <li>限時點數效期至109/6/30</li>
+                                <li>加贈點數於次週五入點</li>
+                            </ol>
+                        </blockquote>
+
+                    </div>
+                    <div class="col">
+                        <div class="title-border"><img src="images/logo-sogo.png" alt=""></div>
+                        <h6>SOGO獨家卡友禮</h6>
+                        <p class="box-content">
+                            活動期間於SOGO百貨消費單筆<br />
+                            滿1,000元加<span class="circle">贈</span><span class="highlight">100</span>點
+                        </p>
+                        <blockquote>
+                            <ol>
+                                <li>每卡每日限領一次，玉山銀行幸運PLUS鈦金卡除外</li>
+                                <li>消費後次週五起由DDIM入點</li>
+                            </ol>
+                        </blockquote>
+                    </div>
+                    <div class="col">
+                        <div class="title-border"><img src="images/logo-bigcity.jpg" alt=""></div>
+                        <h6><span class="yellow">週週抽</span>新春發財金<span class="yellow">6,666</span></h6>
+                        <div class="box-content">
+                            <b><span>活動日期 |</span> 2020/1/1-2020/1/31<br />
+                                <span>活動方式 |</span><br /></b>
+                            <p class="text">
+                                單筆消費滿<span class="color">666</span>元即獲一次抽獎機會，<br />
+                                週週抽出一名，可得新春發財金<span class="color">6,666</span>元，<br />
+                                消費越多，機會越大。(共6名) 
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="title-border"><img src="images/logo-citysuper.jpg" alt=""></div>
+                        <h6>滿額抵用券</h6>
+                        <p class="box-content">
+                            使用HAPPY GO Pay單筆消費<br />
+                            滿5,000元<span class="circle">贈</span><span class="highlight">100</span>元<br />
+                            抵用券1張(十足抵用)
+                        </p>
+                    </div>
+                    <div class="col">
+                        <div class="title-border"><img src="images/logo-themall.jpg.png" alt=""></div>
+                        <p class="box-content">
+                            1/18-2/9<br />
+                            使用HAPPY GO Pay<br />
+                            單筆滿2,000元<span class="circle">贈</span><span class="highlight">100</span>點
+                        </p>
+                        <blockquote>
+                            <p>* 每人每卡限兌換1份，共限量200份</p>
+                        </blockquote>
+                    </div>
+                    <div class="col extra">
+                        <h4>電信</h4>
+                        <div class="col">
+                            <div class="title-border"><img src="images/logo-FET.jpg" alt=""></div>
+                            <h6>月月抽500點</h6>
+                            <p class="box-content">
+                                1/1-3/31月月抽<span>500</span>點<br />
+                                須於指定通路消費任刷一筆<br />
+                                不限金額<b>(每月限量500名)</b>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col extra">
+                        <h4>量販</h4>
+                        <div class="col">
+                            <div class="title-border"><img src="images/logo-amart.jpg" alt=""></div>
+                            <h6>愛買加碼禮</h6>
+                            <p class="box-content">
+                                單筆消費滿500<b>含以上</b>加<span class="circle">贈</span><span class="highlight">50</span>點
+                            </p>
+                            <blockquote>
+                                <p>每戶每月限回饋2次</p>
+                            </blockquote>
+                            <h6>愛買加碼禮</h6>
+                            <p class="box-content">
+                                花旗現金回饋PLUS<b>(悠遊)</b>卡，於愛買消費單筆金額滿NT$2,000<b>含以上</b>回饋HAPPY GO點<span
+                                    class="highlight">300</span>點
+                            </p>
+                            <blockquote>
+                                <p>每卡每月限回饋乙次</p>
+                            </blockquote>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- 方便加倍 -->
+        <section class="section" id="point">
+            
+
+            <h2>點金雙Pay <span>方便加倍</span></h2>
+            <div class="wrapper">
+
+
+                <div class="col">
+                    <img src="images/phone.png" alt="">
+                </div>
+                <div class="col">
+                    <div class="block">
+                        <h6 class="point-1">即時支付 最便利</h6>
+                        <p>
+                            立即下載HAPPY GO App，即刻綁定信用卡，<br/>使用HAPPY GO Pay，購物變得即時又方便！
+                        </p>
+                    </div>
+                    <div class="block">
+                        <h6 class="point-2">點=金 最夠利</h6>
+                        <p>
+                            使用HAPPY GO Pay消費支付，<br/>
+                            累積HAPPY GO點數，<br/>
+                            同步也可用HAPPY GO點數折抵現金，<br/>
+                            讓你省荷包，享受聰明快樂消費生活！
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="link-wrapper">
+                <a class="link" href="javascript:;" target="_blank">立即綁定</a>
+                <a class="link" href="javascript:;" target="_blank">詳見Q&A</a>
+            </div>
+        </section>
+
+        <!-- 生活圈 -->
+        <section class="section" id="life">
+            <div class="block-bg"><img src="images/tri-bg-1.png" alt=""></div>
+            <div class="block-bg-2"><img src="images/tri-bg-2.png" alt=""></div>
+            <div class="container">
+                <h2>速Pay <span>生活圈</span></h2>
+                <div class="wrapper">
+
+
+                    <div class="col">
+                        <h3>10大通路重棒出擊<br />
+                            速Pay你的生活圈</h3>
+                        <p>日常生活採買、電信或是逛百貨、 吃美食等都能
+                            使用HAPPY GO Pay，其店家涵蓋全台遠東百貨、
+                            遠東SOGO百貨、遠東巨城購物中 、愛買量販、
+                            TheMall遠企購物 、city’super、遠傳電信、
+                            香格里拉台北遠東國際飯店、
+                            香格里拉台南東國際飯店、mega50。</p>
+
+                        <p>貼近你的生活圈，方便多一點!</p>
+                        <a href="javascript:;" class="link-border">不適用HAPPY GO Pay之櫃位</a>
+                    </div>
+                    <div class="col map">
+                        <div class="map-bg"><img src="images/map.png" alt=""></div>
+                        <div class="item s1"><img src="images/location/logo-FE.png" alt=""></div>
+                        <div class="item s2"><img src="images/location/logo-sogo.png" alt=""></div>
+                        <div class="item s3"><img src="images/location/logo-SL.png" alt=""></div>
+                        <div class="item s4"><img src="images/location/logo-themall.png" alt=""></div>
+                        <div class="item s5"><img src="images/location/logo-FET.png" alt=""></div>
+                        <div class="item s6"><img src="images/location/logo-amart.png" alt=""></div>
+                        <div class="item s7"><img src="images/location/logo-bigcity.png" alt=""></div>
+                        <div class="item s8"><img src="images/location/logo-mega50.png" alt=""></div>
+                        <div class="item s9"><img src="images/location/logo-citysuper.png" alt=""></div>
+                        <div class="item s10"><img src="images/location/logo-SL.png" alt=""></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- APP專屬優惠 -->
+        <section class="section" id="app">
+            <div class="container">
+                <div class="wrapper">
+                    <div class="col">
+                        <img class="phone" src="images/phone-app.png" alt="">
+                    </div>
+                    <div class="col">
+                        <div class="years-logo"><img src="images/logo-70years.png" alt=""></div>
+                        <h3>會員限量專屬優惠</h3>
+                        <p>最豐富的點數優惠都在這裡！<br/>
+                            HAPPY GO App有會員專屬好康<br/>
+                            立即開啟HAPPY GO App</p>
+                        <div class="wrapper app-link-wrapper">
+                            <a href="javascripts:;" target="_blank"><img src="images/app-appstore.png" alt=""></a>
+                            <a href="javascripts:;" target="_blank"><img src="images/app-googleplay.png" alt=""></a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <div class="slogan">
+            <div class="container">
+                <div class="wrapper">
+                    <div class="col"><h5>謹慎理財 信用無價</h5></div>
+                    <div class="col">
+                        <p>循環利率5%~15%(依各銀行電腦評等而訂，基準日:104/09/01)預借現金手續費(依預借現金約定結付幣別區分):預借現金金額x3.5%+新臺幣100元/3.5美元/350日圓/2.5歐元)
+                            相關費率依各銀行網站及申請書公告為主</p>
+                    </div>
+                </div>
+                
+            </div>
+
+        </div>
+
+        <!-- FOOTER -->
+        <footer>
+            鼎鼎聯合行銷(股)公司版權所有 <span>Copyright 2020 All Right Reserved by DDIM</span>
+        </footer>
+    </div>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
