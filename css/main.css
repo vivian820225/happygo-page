@@ -1894,6 +1894,18 @@ footer {
   h3 {
     font-size: 2rem;
   }
+  .close-icon {
+    width: 40px;
+    height: 40px;
+    top: 10px;
+    right: 15px;
+  }
+  .close-icon span {
+    width: 40px;
+  }
+  .close-icon span::after {
+    width: 40px;
+  }
   .topbar {
     padding: 20px;
   }
