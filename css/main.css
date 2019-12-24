@@ -1885,6 +1885,9 @@ footer {
 }
 
 @media screen and (max-width: 580px) {
+  .main-menu a {
+    font-size: 2rem;
+  }
   h2 {
     font-size: 2.5rem;
   }
