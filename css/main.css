@@ -271,7 +271,12 @@ body {
   padding-bottom: 30px;
 }
 
+.main-menu li:first-child a {
+  left: 40px;
+}
+
 .main-menu a {
+  position: relative;
   color: #fff;
   font-size: 3rem;
   font-style: italic;
@@ -1885,6 +1890,9 @@ footer {
 }
 
 @media screen and (max-width: 580px) {
+  .main-menu li:first-child a {
+    left: 20px;
+  }
   .main-menu a {
     font-size: 2rem;
   }

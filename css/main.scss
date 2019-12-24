@@ -255,8 +255,14 @@ $orange: #d94114;
   transition: transform 0.2s, opacity 0.2s;
   li {
     padding-bottom: 30px;
+    &:first-child{
+      a{
+        left: 40px;
+      }
+    }
   }
   a {
+    position: relative;
     color: $white;
     font-size: 3rem;
     font-style: italic;
@@ -1714,6 +1720,13 @@ footer {
 @media screen and (max-width: 580px){
 
   .main-menu{
+    li{
+      &:first-child{
+        a{
+          left: 20px;
+        }
+      }
+    }
     a{
       font-size: 2rem;
     }
