@@ -7,10 +7,12 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>HAPPY GO Pay</title>
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC:300,500,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/jquery.mCustomScrollbar.css">
     <link rel="stylesheet" href="css/main.css">
     <script src="js/jquery-1.11.1.min.js"></script>
     <script src="js/TweenMax.min.js"></script>
     <script src="js/TweenLite.min.js"></script>
+    <script src="js/ScrollMagic.js"></script>
 </head>
 
 <body>
@@ -29,55 +31,270 @@
         <div class="pop-overlay"></div>
         <div class="pop-container">
             <div class="btn-close"></div>
-            <h2>十大通路<span>20</span>倍檔期 回饋時間表</h2>
-            <div class="content-table">
-                <table>
+            <h2>十大通路<span class="red">20</span>倍檔期<span class="sub">回饋時間表</span></h2>
+            <div class="content-text">
+                <div class="content-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>各大通路</th>
+                                <th>檔期時間</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>遠東百貨</td>
+                                <td>1/10~1/22</td>
+                            </tr>
+                            <tr>
+                                <td>遠東SOGO</td>
+                                <td>1/10~1/24</td>
+                            </tr>
+                            <tr>
+                                <td>Big City</td>
+                                <td>1/10~1/24</td>
+                            </tr>
+                            <tr>
+                                <td>City'Super</td>
+                                <td>1/10~1/24
+                                    <b>台中大遠百、板橋大遠百、信義遠百、遠東SOGO</b>
+                                    1/10~1/24
+                                    <b>SOGO天母店、SOGO復興館、巨城購物中心</b>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>The Mall</td>
+                                <td>1/18~2/1</td>
+                            </tr>
+                            <tr>
+                                <td>遠傳電信</td>
+                                <td>1/10~1/24</td>
+                            </tr>
+                            <tr>
+                                <td>香格里拉台北遠東國際大飯店</td>
+                                <td>1/10~1/24</td>
+                            </tr>
+                            <tr>
+                                <td>香格里拉台南遠東國際大飯店</td>
+                                <td>1/10~1/24</td>
+                            </tr>
+                            <tr>
+                                <td>Mega50</td>
+                                <td>1/10~1/24</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 不適用之櫃位 -->
+    <div class="popup" id="no-addp_more">
+        <div class="pop-overlay"></div>
+        <div class="pop-container">
+            <div class="btn-close"></div>
+            <div class="header header2">
+                <h5><b>不適用<br>HAPPY GO Pay之櫃位</b></h5>
+            </div>
+            <div class="precautions content-text">
+                <h6>遠東百貨</h6>
+                <table class="striped">
                     <thead>
                         <tr>
-                            <th>各大通路</th>
-                            <th>檔期時間</th>
+                            <th class="w230">各分店</th>
+                            <th class="w330">無法使用HAPPY GO Pay 櫃位</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td>遠東百貨</td>
-                            <td>1/10~1/22</td>
+                            <td>寶慶遠百</td>
+                            <td>Jasons超市、麥當勞</td>
                         </tr>
                         <tr>
-                            <td>遠東SOGO</td>
-                            <td>1/10~1/24</td>
+                            <td>板橋遠百</td>
+                            <td>Jasons超市、麥當勞、湯姆熊</td>
                         </tr>
                         <tr>
-                            <td>Big City</td>
-                            <td>1/10~1/24</td>
+                            <td>板橋大遠百</td>
+                            <td>海底撈、威秀影城、大食代 、Massimo Dutti、丸龜製麵、麥當勞、暐融修改室、Birkenstock勃肯</td>
                         </tr>
                         <tr>
-                            <td>City'Super</td>
-                            <td>1/10~1/24
-                                <b>台中大遠百、板橋大遠百、信義遠百、遠東SOGO</b>
-                                1/10~1/24
-                                <b>SOGO天母店、SOGO復興館、巨城購物中心</b>
-                            </td>
+                            <td>桃園遠百</td>
+                            <td>麥當勞、7-11、湯姆熊</td>
                         </tr>
                         <tr>
-                            <td>The Mall</td>
-                            <td>1/18~2/1</td>
+                            <td>新竹大遠百</td>
+                            <td>Jasons超市、海底撈、威秀影城、Massimo Dutti</td>
                         </tr>
                         <tr>
-                            <td>遠傳電信</td>
-                            <td>1/10~1/24</td>
+                            <td>台中大遠百</td>
+                            <td>海底撈、威秀影城、大食代 、Chanel精品、Dior精品、暐融修改室、Marella、iBLUES、麥當勞、7-11、H&M、Pull&Bear</td>
                         </tr>
                         <tr>
-                            <td>香格里拉台北遠東國際大飯店</td>
-                            <td>1/10~1/24</td>
+                            <td>嘉義遠百</td>
+                            <td></td>
                         </tr>
                         <tr>
-                            <td>香格里拉台南遠東國際大飯店</td>
-                            <td>1/10~1/24</td>
+                            <td>台南遠百成功店</td>
+                            <td>麥當勞、湯姆貝貝</td>
                         </tr>
                         <tr>
-                            <td>Mega50</td>
-                            <td>1/10~1/24</td>
+                            <td>台南遠百公園店</td>
+                            <td>威秀影城、湯姆熊、肉多多</td>
+                        </tr>
+                        <tr>
+                            <td>高雄大遠百</td>
+                            <td>威秀影城、Bershka、麥當勞、湯姆熊、全家便利商店</td>
+                        </tr>
+                        <tr>
+                            <td>花蓮遠百</td>
+                            <td>麥當勞、H&M</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <h6>遠東SOGO百貨</h6>
+                <table class="striped">
+                    <thead>
+                        <tr>
+                            <th class="w230">館別</th>
+                            <th class="w330">無法使用HAPPY GO Pay 櫃位</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>忠孝館</td>
+                            <td>Nespresso Boutique、麥當勞、WHY AND 1/2童裝</td>
+                        </tr>
+                        <tr>
+                            <td>復興館</td>
+                            <td> <br><b class="color-red">(可使用HAPPY GO Pay但不適用點數折抵及回饋活動：Louis Vuitton、CHANEL精品)</b></td>
+                        </tr>
+                        <tr>
+                            <td>敦化館</td>
+                            <td>ABC Cooking Studio</td>
+                        </tr>
+                        <tr>
+                            <td>天母店</td>
+                            <td>Starbucks</td>
+                        </tr>
+                        <tr>
+                            <td>中壢店</td>
+                            <td>麥當勞、紅帽象、丸龜製麵、WHY AND 1/2童裝</td>
+                        </tr>
+                        </tr>
+                        <tr>
+                            <td>新竹Big City館</td>
+                            <td>Nespresso精品店、騎士堡</td>
+                        </tr>
+                        <tr>
+                            <td>高雄店</td>
+                            <td>湯姆熊、寶寶童話兒童攝影館、World Gym、樂高教育活動中心</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <h6>愛買量販</h6>
+                <table class="striped">
+                    <thead>
+                        <tr>
+                            <th class="w230">各分店</th>
+                            <th class="w330">無法使用HAPPY GO Pay 櫃位</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>復興店</td>
+                            <td>健身工廠、長亨生技、采藝軒、王妃珠寶、汽車美容</td>
+                        </tr>
+                        <tr>
+                            <td>景美店</td>
+                            <td>全部美商街</td>
+                        </tr>
+                        <tr>
+                            <td>永和店</td>
+                            <td>全部美商街</td>
+                        </tr>
+                        <tr>
+                            <td>桃園店</td>
+                            <td>Starbucks、麥當勞、生活工場、職人的店、大創、港點大師、吉野宴、巧克力雲莊、爭鮮</td>
+                        </tr>
+                        <tr>
+                            <td>楊梅店</td>
+                            <td>全部美商街</td>
+                        </tr>
+                        <tr>
+                            <td>台南店</td>
+                            <td>大創</td>
+                        </tr>
+                        <tr>
+                            <td>忠孝店</td>
+                            <td>全部美商街</td>
+                        </tr>
+                        <tr>
+                            <td>新竹店</td>
+                            <td>麥當勞、Starbucks、爭鮮、adidas</td>
+                        </tr>
+                        <tr>
+                            <td>三重店</td>
+                            <td>麥當勞</td>
+                        </tr>
+                        <tr>
+                            <td>花蓮店</td>
+                            <td>全部美商街</td>
+                        </tr>
+                        <tr>
+                            <td>基隆店</td>
+                            <td>全部美商街</td>
+                        </tr>
+                        <tr>
+                            <td>豐原店</td>
+                            <td>全部美商街</td>
+                        </tr>
+                        <tr>
+                            <td>巨城店</td>
+                            <td>全部美商街</td>
+                        </tr>
+                        <tr>
+                            <td>南雅店</td>
+                            <td>爭鮮、石二鍋</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <h6>遠東巨城購物中心</h6>
+                <table class="striped">
+                    <thead>
+                        <tr>
+                            <th class="w230">樓層</th>
+                            <th class="w330">無法使用HAPPY GO Pay 櫃位</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>8F</td>
+                            <td>湯姆熊</td>
+                        </tr>
+                        <tr>
+                            <td>6F</td>
+                            <td>WORLD GYM</td>
+                        </tr>
+                        <tr>
+                            <td>4F</td>
+                            <td>威秀影城、丸龜製麵</td>
+                        </tr>
+                        <tr>
+                            <td>3F</td>
+                            <td>BCG美車庫、BBC三合院</td>
+                        </tr>
+                        <tr>
+                            <td>2F</td>
+                            <td>藏壽司</td>
+                        </tr>
+                        <tr>
+                            <td>1F</td>
+                            <td>H&M(1F-3F)</td>
+                        </tr>
+                        <tr>
+                            <td>B1</td>
+                            <td>Pull&Bear、Tomod's、全家、晶碩、MINISO</td>
                         </tr>
                     </tbody>
                 </table>
@@ -388,7 +605,8 @@
             <div class="bg-pattern"><img src="images/pattern/bg-05.png" alt=""></div>
             <div class="bg-pattern"><img src="images/pattern/bg-06.png" alt=""></div>
 
-            <h2>點金雙Pay <span>方便加倍</span></h2>
+            <h2><span>點</span><span>金</span><span>雙</span><span>Pay</span><span class="orange"> 方</span><span
+                    class="orange">便</span><span class="orange">加</span><span class="orange">倍</span></h2>
             <div class="wrapper">
 
 
@@ -414,8 +632,9 @@
                 </div>
             </div>
             <div class="link-wrapper">
-                <a href="javascript:;" target="_blank">立即綁定</a>
-                <a href="javascript:;" target="_blank">詳見Q&A</a>
+                <a href="https://event.happygocard.com.tw/app/event/tips_happygopay.html?utm_source=happygopayweb&utm_medium=happygoevent&utm_campaign=happygoevent_1"
+                    target="_blank">立即綁定</a>
+                <a href="https://www.happygocard.com.tw/official/faqList.do" target="_blank">詳見Q&A</a>
             </div>
         </section>
 
@@ -426,22 +645,19 @@
             <div class="block-bg"><img src="images/tri-bg-1.png" alt=""></div>
             <div class="block-bg-2"><img src="images/tri-bg-2.png" alt=""></div>
             <div class="container">
-                <h2>速Pay <span>生活圈</span></h2>
+                <h2><span>速</span><span>Pay</span><span class="yellow"> 生</span><span class="yellow">活</span><span
+                        class="yellow">圈</span></h2>
                 <div class="wrapper">
 
 
                     <div class="col">
                         <h3>10大通路重棒出擊<br />
                             速Pay你的生活圈</h3>
-                        <p>日常生活採買、電信或是逛百貨、 吃美食等都能
-                            使用HAPPY GO Pay，其店家涵蓋全台遠東百貨、
-                            遠東SOGO百貨、遠東巨城購物中 、愛買量販、
-                            TheMall遠企購物 、city’super、遠傳電信、
-                            香格里拉台北遠東國際飯店、
-                            香格里拉台南東國際飯店、mega50。</p>
-
+                        <p>日常生活採買、電信或是逛百貨、吃美食等都能使用HAPPY GO
+                            Pay，其店家涵蓋全台遠東百貨、遠東SOGO百貨、遠東巨城購物中心、愛買量販、TheMall遠企購物、city’super、遠傳電信、香格里拉台北遠東國際飯店、香格里拉台南東國際飯店、mega50。
+                        </p>
                         <p>貼近你的生活圈，方便多一點!</p>
-                        <a href="javascript:;" class="link-border">不適用HAPPY GO Pay之櫃位</a>
+                        <a href="javascript:noAddpMore()" class="link-border">不適用HAPPY GO Pay之櫃位</a>
                     </div>
                     <div class="col map">
                         <div class="map-bg"><img src="images/map.png" alt=""></div>
@@ -462,8 +678,8 @@
 
         <!-- APP專屬優惠 -->
         <section class="section" id="app">
-                <div class="bg-pattern"><img src="images/pattern/bg-02.png" alt=""></div>
-                <div class="bg-pattern"><img src="images/pattern/bg-02.png" alt=""></div>
+            <div class="bg-pattern"><img src="images/pattern/bg-02.png" alt=""></div>
+            <div class="bg-pattern"><img src="images/pattern/bg-02.png" alt=""></div>
             <div class="container">
                 <div class="wrapper">
                     <div class="col">
@@ -476,8 +692,10 @@
                             HAPPY GO App有會員專屬好康<br />
                             立即開啟HAPPY GO App</p>
                         <div class="wrapper app-link-wrapper">
-                            <a href="javascripts:;" target="_blank"><img src="images/app-appstore.png" alt=""></a>
-                            <a href="javascripts:;" target="_blank"><img src="images/app-googleplay.png" alt=""></a>
+                            <a href="https://hgapp.page.link/mkt04" target="_blank"><img src="images/app-appstore.png"
+                                    alt=""></a>
+                            <a href="https://hgapp.page.link/mkt05" target="_blank"><img src="images/app-googleplay.png"
+                                    alt=""></a>
                         </div>
                     </div>
                 </div>
@@ -506,8 +724,25 @@
             鼎鼎聯合行銷(股)公司版權所有 <span>Copyright 2020 All Right Reserved by DDIM</span>
         </footer>
     </div>
+    <!-- <script src="https://www.happygocard.com.tw/official/event/HAPPYGOAPP/HAPPYGOPay/Scripts/libs/jquery.easing.1.3.js"></script> -->
+    <script
+        src="https://www.happygocard.com.tw/official/event/HAPPYGOAPP/HAPPYGOPay/Scripts/mCustomScrollbar/jquery.mousewheel.min.js"></script>
+    <script
+        src="https://www.happygocard.com.tw/official/event/HAPPYGOAPP/HAPPYGOPay/Scripts/mCustomScrollbar/jquery.mCustomScrollbar.js"></script>
     <script src="js/main.js"></script>
     <script src="js/parallax.js"></script>
+    <script>
+        (function ($) {
+            $(window).load(function () {
+                $(".content-text").mCustomScrollbar({
+                    scrollButtons: {
+                        enable: false
+                    },
+                    autoHideScrollbar: false,
+                });
+            });
+        })(jQuery);
+    </script>
 </body>
 
 </html>

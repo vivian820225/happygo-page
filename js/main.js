@@ -43,6 +43,11 @@ function eventTime() {
   TweenMax.to("#event-time", 0.5, { delay: 0.1, alpha: 1 });
 }
 
+function noAddpMore() {
+  TweenMax.to("#no-addp_more", 0, { top: 0, ease: Quart.easeOut });
+  TweenMax.to("#no-addp_more", 0.5, { delay: 0.1, alpha: 1 });
+}
+
 $(".btn-close, .pop-overlay").on("click", function() {
   TweenMax.to(".popup", 1.5, {
     alpha: 0,
