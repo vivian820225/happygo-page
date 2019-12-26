@@ -73,11 +73,11 @@ $(".btn-close, .pop-overlay").on("click", function() {
 
 // fadeIn
 TweenMax.to(".main-title", 0, { alpha: 0, y: 60 });
-TweenMax.to("#main .container", 0, { alpha: 0, y: 80 });
+TweenMax.to("#main .container", 0, { alpha: 0, y: 40 });
 
 var controller = new ScrollMagic.Controller();
 
-var tween = new TimelineMax().to(".main-title", 1, { alpha: 1, y: 0 });
+var tween = new TimelineMax().to(".main-title", 1, { alpha: 1, y: 0, delay: 0.5});
 var scene = new ScrollMagic.Scene({
   triggerElement: ".topbar",
   triggerHook: "onCenter",
@@ -86,7 +86,7 @@ var scene = new ScrollMagic.Scene({
   .setTween(tween)
   .addTo(controller);
 
-var tween1 = new TimelineMax().to("#main .container", 1, { alpha: 1, y: 0, delay: 1});
+var tween1 = new TimelineMax().to("#main .container", 1, { alpha: 1, y: 0, delay: 2});
 var scene1 = new ScrollMagic.Scene({
   triggerElement: "#main .container",
   triggerHook: "onCenter",
