@@ -1990,15 +1990,15 @@ footer {
             flex-flow: column wrap;
     -ms-flex-flow: column wrap;
   }
-  #pay .grid-item {
-    width: initial;
-  }
   #pay .col {
-    width: 100%;
+    width: initial;
     max-width: initial;
   }
   #pay .col.space {
     padding-bottom: 20px;
+  }
+  #pay .grid-item {
+    width: calc(100% - 20px);
   }
   #point h2 {
     font-size: 4rem;

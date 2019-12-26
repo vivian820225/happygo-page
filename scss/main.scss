@@ -1774,15 +1774,16 @@ footer {
       -ms-flex-flow: column wrap;
     }
 
-    .grid-item{
-      width: initial;
-    }
     .col {
-      width: 100%;
+      width: initial;
       max-width: initial;
       &.space{
         padding-bottom: 20px;
       }
+    }
+
+    .grid-item{
+      width: calc(100% - 20px);
     }
   }
 
