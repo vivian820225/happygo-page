@@ -898,6 +898,10 @@ h3 {
   height: auto;
 }
 
+#period .bank-container .banks li img.height {
+  max-width: 130px;
+}
+
 #pay {
   padding-bottom: 160px;
 }
@@ -1873,6 +1877,9 @@ footer {
   #period .bank-container .banks li img.extra {
     height: 58px;
   }
+  #period .bank-container .banks li img.height {
+    max-width: 200px;
+  }
   #pay .bg-pattern:nth-child(1) {
     top: 1%;
     left: -120px;
@@ -2145,6 +2152,9 @@ footer {
   }
   #period .bank-container .banks li img {
     max-width: 140px;
+  }
+  #period .bank-container .banks li img.height {
+    max-width: 150px;
   }
   #pay .bg-pattern:nth-child(1) {
     width: 180px;

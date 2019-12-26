@@ -789,6 +789,9 @@ h3 {
           &.extra {
             height: auto;
           }
+          &.height{
+            max-width: 130px;
+          }
         }
       }
     }
@@ -1612,6 +1615,9 @@ footer {
             &.extra{
               height: 58px;
             }
+            &.height{
+              max-width: 200px;
+            }
           }
         }
       }
@@ -1980,6 +1986,9 @@ footer {
         li{
           img{
             max-width: 140px;
+            &.height{
+              max-width: 150px;
+            }
           }
         }
       }
