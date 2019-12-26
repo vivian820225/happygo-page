@@ -1905,9 +1905,9 @@ footer {
     }
     .content{
       clip-path: polygon(50% 7%, 100% 3%, 100% 100%, 0 100%, 0 3%);
-      &::after{
-        top: calc(50% - 10px);
-      }
+      // &::after{
+      //   top: calc(50% - 10px);
+      // }
     }
     .wrapper{
       padding: 60px 10px;
