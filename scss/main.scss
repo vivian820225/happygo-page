@@ -359,12 +359,27 @@ h3 {
   box-sizing: border-box;
 }
 
+.grid{
+  width: 100%;
+  height: auto;
+  &::after{
+    content: '';
+    display: table;
+    clear: both;
+  }
+}
+
 .col {
   flex: 1 1 50%;
   max-width: 50%;
   box-sizing: border-box;
   position: relative;
   z-index: 5;
+  &.grid-item{
+    width: 50%;
+    max-width: initial;
+    float: left;
+  }
 }
 
 .content {
@@ -916,6 +931,9 @@ h3 {
         margin-top: 100px;
       }
     }
+    &.space{
+      padding-bottom: 54px;
+    }
   }
 
   .title-border {
@@ -958,10 +976,11 @@ h3 {
       align-items: stretch;
       box-sizing: border-box;
       span {
-        padding: 10px;
+        padding: 10px 20px 10px 15px;
         color: $white;
-        font-size: 2.5rem;
         background-color: $yellow;
+        font-size: 1.4rem;
+        text-align: center;
       }
       img {
         padding-top: 0;
@@ -976,20 +995,23 @@ h3 {
   .box-content {
     padding: 10px 20px;
     color: #303030;
-    font-size: 2.5rem;
+    font-size: 2.4rem;
     font-weight: 700;
 
     .circle {
-      font-size: 2rem;
+      font-size: 1.8rem;
       font-weight: 500;
-      margin: 0 6px;
+      margin: 0 2px;
       padding: 0 8px 2px 8px;
       color: $white;
       background-color: $orange;
+      position: relative;
+      top: -2px;
       border-radius: 50%;
     }
     .highlight {
       color: $orange;
+      font-size: 2.6rem;
     }
     b {
       font-size: 1.5rem;
@@ -1006,6 +1028,23 @@ h3 {
       .color {
         color: $orange;
         font-size: initial;
+      }
+    }
+    &.extra{
+      p{
+        padding-top: 10px;
+        padding-left: 20px;
+        font-size: 2rem;
+        text-indent: -20px;
+      }
+      .light{
+        display: block;
+        padding-left: 20px;
+        font-size: 1rem;
+        font-weight: 300;
+      }
+      .color{
+        color: $orange;
       }
     }
   }
@@ -1404,6 +1443,7 @@ h3 {
     justify-content: flex-start;
     align-items: center;
     a {
+      max-width: 150px;
       margin-right: 10px;
     }
   }
@@ -1733,8 +1773,16 @@ footer {
       flex-flow: column wrap;
       -ms-flex-flow: column wrap;
     }
+
+    .grid-item{
+      width: initial;
+    }
     .col {
+      width: 100%;
       max-width: initial;
+      &.space{
+        padding-bottom: 20px;
+      }
     }
   }
 
@@ -1977,6 +2025,15 @@ footer {
     }
     .box-content{
       font-size: 1.8rem;
+      &.extra{
+        p{
+          font-size: 1.8rem;
+          &:first-child{
+            text-indent: initial;
+            padding-left: initial;
+          }
+        }
+      }
       .circle{
         padding: 0 6px 2px 6px;
         font-size: 1.6rem;
@@ -2063,9 +2120,6 @@ footer {
 }
 
 
-
-
-
 // POP
 .pop-overlay {
   position: fixed;
@@ -2084,7 +2138,7 @@ footer {
   opacity: 0;
   .pop-container {
     width: 900px;
-    margin: 10vh auto;
+    margin: 6vh auto;
     padding: 40px;
     position: relative;
     left: 0;
@@ -2094,6 +2148,67 @@ footer {
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
     box-sizing: border-box;
     z-index: 1;
+    p{
+      padding-left: 96px;
+      margin-bottom: 4px;
+      color: #1f1f1f;
+      font-size: 1.6rem;
+      font-weight: 700;
+      text-indent: -96px;
+      line-height: 1.4;
+    }
+    .text{
+      width: 95%;
+      margin: 0 auto;
+      h6{
+        margin-top: 40px;
+        padding-bottom: 10px;
+        color: $orange;
+        font-size: 1.8rem;
+        font-style: italic;
+        text-align: center;
+        letter-spacing: 1px;
+
+      }
+      ul{
+        li{
+          position: relative;
+          margin: 10px auto;
+          padding: 20px;
+          background-color: #f2f2f2;
+          border-radius: 10px;
+          box-sizing: border-box;
+          h5{
+            display: inline-block;
+            padding: 4px 16px 6px 20px;
+            position: relative;
+            left: -20px;
+            color: $white;
+            background-color: $orange;
+            font-size: 1.8rem;
+            letter-spacing: 1px;
+            border-top-right-radius: 50px;
+            border-bottom-right-radius: 50px;
+          }
+          p{
+            margin: 0 auto;
+            padding: 0;
+            padding-top: 10px;
+            font-size: 1.4rem;
+            font-weight: 500;
+            line-height: 1.5;
+            text-indent: initial;
+            span{
+              color: $orange;
+            }
+          }
+        }
+      }
+      ol{
+        font-size: 1.2rem;
+      }
+    }
+    
   }
 
   h2 {
@@ -2101,6 +2216,10 @@ footer {
     font-size: 4rem;
     text-align: center;
     margin-bottom: 20px;
+    &.italic{
+      font-style: italic;
+      letter-spacing: 1px;
+    }
     .red {
       padding: 0 2px 0 5px;
       color: $red;
@@ -2112,16 +2231,120 @@ footer {
     }
   }
 
+  .header{
+    width: 95%;
+    max-width: 640px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    padding: 0;
+    color: $blue;
+    font-size: 2rem;
+    font-style: italic;
+    text-align: center;
+    letter-spacing: 2px;
+    &::after{
+      content: '';
+      display: table;
+      clear: both;
+    }
+    h5{
+      &::before, &::after{
+        content: '';
+        display: block;
+        width: 26%;
+        margin-top: calc((40vw / 1920)*100);
+        border-top: 2px solid $blue;
+        float: left;
+      }
+      &::after{
+        float: right;
+      }
+      b{
+        width: 48%;
+        position: relative;
+        top: -15px;
+        float: left;
+      }
+    }
+  }
+
+  .precautions{
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+    position: relative;
+    box-sizing: border-box;
+    h6{
+      margin: 10px auto;
+      margin-top: 30px;
+      padding: 0;
+      color: #ff6450;
+      font-size: 28px;
+      font-weight: 700;
+      line-height: 48px;
+      letter-spacing: 3px;
+      text-align: center;
+      &:first-child{
+        margin-top: 10px;
+      }
+    }
+    .striped{
+      width: 90%;
+      max-width: 90%;
+      margin: 0 auto;
+      thead{
+        color: #333;
+        background-color: #e4e4e4;
+        th{
+          padding: 10px 20px;
+          font-size: 16px;
+          font-weight: 700;
+          text-align: left;
+        }
+      }
+      tr{
+        border-top: 1px #eeeeee solid;
+        border-bottom: 1px #eeeeee solid;
+        &:nth-of-type(even){
+          background-color: #f9f9f9;
+        }
+        td{
+          width: 25%;
+          margin: auto;
+          padding: 10px 20px;
+          color: #333333;
+          font-size: 14px;
+          font-weight: 300;
+          line-height: 20px;
+          text-align: left;
+          letter-spacing: 1px;
+          border: 0px #e4e4e4 solid;
+          &:nth-of-type(even){
+            width: 40%;
+          }
+          .color{
+            color: $blue;
+            font-size: 12px;
+            font-weight: 300;
+          }
+        }
+      }
+    }
+    
+
+  }
+
   .btn-close {
     display: block;
     width: 48px;
     height: 48px;
     position: absolute;
-    top: 60px;
-    right: 40px;
+    top: 20px;
+    right: 30px;
     z-index: 9999;
     cursor: pointer;
-    &::before {
+    &::before, &::after{
       content: "";
       display: block;
       width: 48px;
@@ -2130,17 +2353,10 @@ footer {
       border: 1px solid $white;
       border-radius: 10px;
       position: absolute;
+      top: 50%;
       transform: rotate(45deg);
     }
     &::after {
-      content: "";
-      display: block;
-      width: 48px;
-      height: 3px;
-      background-color: $yellow;
-      border: 1px solid $white;
-      border-radius: 10px;
-      position: absolute;
       transform: rotate(-45deg);
     }
   }
@@ -2148,7 +2364,7 @@ footer {
 
 .content-text{
   width: 100%;
-  height: auto;
+  height: 420px;
   position: relative;
   overflow: hidden;
 }
@@ -2161,7 +2377,9 @@ footer {
   letter-spacing: 1px;
   box-sizing: border-box;
   table{
-    width: 100%;
+    width: 95%;
+    max-width: 95%;
+    margin: 0 auto;
   }
   thead {
     color: $white;
@@ -2212,12 +2430,26 @@ footer {
     h2{
       font-size: 2.8rem;
     }
+    .header{
+      h5{
+        &::before, &::after{
+          width: 15%;
+          margin-top: calc((40vw/1024)*100);
+        }
+        b{
+          width: 70%;
+        }
+      }
+    }
     .pop-container{
       width: 90%;
       max-width: 580px;
     }
+    .precautions{
+      padding: 0;
+    }
     .btn-close{
-      top: 40px;
+      top: 10px;
       right: 20px;
     }
   } 
@@ -2245,17 +2477,48 @@ footer {
         font-size: 2rem;
       }
     }
+    .header{
+      font-size: 1.6rem;
+      h5{
+        &::before, &::after{
+          width: 6%;
+          margin-top: calc((40vw / 580)*100);
+        } 
+        b{
+          width: 88%;
+          top: 0;
+        }
+      }
+    }
     .btn-close{
       width: 30px;
       height: 30px;
-      top: 25px;
-      right: 10px;
+      top: 4px;
+      right: 6px;
       &::before, &::after{
         width: 30px;
       }
     }
     .pop-container{
       padding: 20px;
+      p{
+        padding-left: 90px;
+        font-size: 18px;
+        text-indent: -90px;
+      }
+      .text{
+        width: 100%;
+      }
+    }
+
+    .precautions{
+      h6{
+        font-size: 2rem;
+      }
+      .striped{
+        width: 100%;
+        max-width: 100%;
+      }
     }
   }
   

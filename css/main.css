@@ -380,6 +380,17 @@ h3 {
           box-sizing: border-box;
 }
 
+.grid {
+  width: 100%;
+  height: auto;
+}
+
+.grid::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
 .col {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 50%;
@@ -389,6 +400,12 @@ h3 {
           box-sizing: border-box;
   position: relative;
   z-index: 5;
+}
+
+.col.grid-item {
+  width: 50%;
+  max-width: initial;
+  float: left;
 }
 
 .content {
@@ -1059,6 +1076,10 @@ h3 {
   margin-top: 100px;
 }
 
+#pay .col.space {
+  padding-bottom: 54px;
+}
+
 #pay .title-border {
   width: 80%;
   max-width: 310px;
@@ -1114,10 +1135,11 @@ h3 {
 }
 
 #pay .title-border.extra span {
-  padding: 10px;
+  padding: 10px 20px 10px 15px;
   color: #fff;
-  font-size: 2.5rem;
   background-color: #f4ba1d;
+  font-size: 1.4rem;
+  text-align: center;
 }
 
 #pay .title-border.extra img {
@@ -1131,22 +1153,25 @@ h3 {
 #pay .box-content {
   padding: 10px 20px;
   color: #303030;
-  font-size: 2.5rem;
+  font-size: 2.4rem;
   font-weight: 700;
 }
 
 #pay .box-content .circle {
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-weight: 500;
-  margin: 0 6px;
+  margin: 0 2px;
   padding: 0 8px 2px 8px;
   color: #fff;
   background-color: #d94114;
+  position: relative;
+  top: -2px;
   border-radius: 50%;
 }
 
 #pay .box-content .highlight {
   color: #d94114;
+  font-size: 2.6rem;
 }
 
 #pay .box-content b {
@@ -1168,6 +1193,24 @@ h3 {
 #pay .box-content .text .color {
   color: #d94114;
   font-size: initial;
+}
+
+#pay .box-content.extra p {
+  padding-top: 10px;
+  padding-left: 20px;
+  font-size: 2rem;
+  text-indent: -20px;
+}
+
+#pay .box-content.extra .light {
+  display: block;
+  padding-left: 20px;
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+#pay .box-content.extra .color {
+  color: #d94114;
 }
 
 #pay blockquote {
@@ -1665,6 +1708,7 @@ h3 {
 }
 
 #app .app-link-wrapper a {
+  max-width: 150px;
   margin-right: 10px;
 }
 
@@ -1946,8 +1990,15 @@ footer {
             flex-flow: column wrap;
     -ms-flex-flow: column wrap;
   }
+  #pay .grid-item {
+    width: initial;
+  }
   #pay .col {
+    width: 100%;
     max-width: initial;
+  }
+  #pay .col.space {
+    padding-bottom: 20px;
   }
   #point h2 {
     font-size: 4rem;
@@ -2130,6 +2181,13 @@ footer {
   #pay .box-content {
     font-size: 1.8rem;
   }
+  #pay .box-content.extra p {
+    font-size: 1.8rem;
+  }
+  #pay .box-content.extra p:first-child {
+    text-indent: initial;
+    padding-left: initial;
+  }
   #pay .box-content .circle {
     padding: 0 6px 2px 6px;
     font-size: 1.6rem;
@@ -2217,7 +2275,7 @@ footer {
 
 .popup .pop-container {
   width: 900px;
-  margin: 10vh auto;
+  margin: 6vh auto;
   padding: 40px;
   position: relative;
   left: 0;
@@ -2231,11 +2289,82 @@ footer {
   z-index: 1;
 }
 
+.popup .pop-container p {
+  padding-left: 96px;
+  margin-bottom: 4px;
+  color: #1f1f1f;
+  font-size: 1.6rem;
+  font-weight: 700;
+  text-indent: -96px;
+  line-height: 1.4;
+}
+
+.popup .pop-container .text {
+  width: 95%;
+  margin: 0 auto;
+}
+
+.popup .pop-container .text h6 {
+  margin-top: 40px;
+  padding-bottom: 10px;
+  color: #d94114;
+  font-size: 1.8rem;
+  font-style: italic;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+.popup .pop-container .text ul li {
+  position: relative;
+  margin: 10px auto;
+  padding: 20px;
+  background-color: #f2f2f2;
+  border-radius: 10px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.popup .pop-container .text ul li h5 {
+  display: inline-block;
+  padding: 4px 16px 6px 20px;
+  position: relative;
+  left: -20px;
+  color: #fff;
+  background-color: #d94114;
+  font-size: 1.8rem;
+  letter-spacing: 1px;
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
+}
+
+.popup .pop-container .text ul li p {
+  margin: 0 auto;
+  padding: 0;
+  padding-top: 10px;
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 1.5;
+  text-indent: initial;
+}
+
+.popup .pop-container .text ul li p span {
+  color: #d94114;
+}
+
+.popup .pop-container .text ol {
+  font-size: 1.2rem;
+}
+
 .popup h2 {
   color: #270188;
   font-size: 4rem;
   text-align: center;
   margin-bottom: 20px;
+}
+
+.popup h2.italic {
+  font-style: italic;
+  letter-spacing: 1px;
 }
 
 .popup h2 .red {
@@ -2249,18 +2378,133 @@ footer {
   padding-left: 10px;
 }
 
+.popup .header {
+  width: 95%;
+  max-width: 640px;
+  margin: 0 auto;
+  margin-bottom: 10px;
+  padding: 0;
+  color: #270188;
+  font-size: 2rem;
+  font-style: italic;
+  text-align: center;
+  letter-spacing: 2px;
+}
+
+.popup .header::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+.popup .header h5::before, .popup .header h5::after {
+  content: '';
+  display: block;
+  width: 26%;
+  margin-top: calc((40vw / 1920)*100);
+  border-top: 2px solid #270188;
+  float: left;
+}
+
+.popup .header h5::after {
+  float: right;
+}
+
+.popup .header h5 b {
+  width: 48%;
+  position: relative;
+  top: -15px;
+  float: left;
+}
+
+.popup .precautions {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+  position: relative;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.popup .precautions h6 {
+  margin: 10px auto;
+  margin-top: 30px;
+  padding: 0;
+  color: #ff6450;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 48px;
+  letter-spacing: 3px;
+  text-align: center;
+}
+
+.popup .precautions h6:first-child {
+  margin-top: 10px;
+}
+
+.popup .precautions .striped {
+  width: 90%;
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+.popup .precautions .striped thead {
+  color: #333;
+  background-color: #e4e4e4;
+}
+
+.popup .precautions .striped thead th {
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: 700;
+  text-align: left;
+}
+
+.popup .precautions .striped tr {
+  border-top: 1px #eeeeee solid;
+  border-bottom: 1px #eeeeee solid;
+}
+
+.popup .precautions .striped tr:nth-of-type(even) {
+  background-color: #f9f9f9;
+}
+
+.popup .precautions .striped tr td {
+  width: 25%;
+  margin: auto;
+  padding: 10px 20px;
+  color: #333333;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 20px;
+  text-align: left;
+  letter-spacing: 1px;
+  border: 0px #e4e4e4 solid;
+}
+
+.popup .precautions .striped tr td:nth-of-type(even) {
+  width: 40%;
+}
+
+.popup .precautions .striped tr td .color {
+  color: #270188;
+  font-size: 12px;
+  font-weight: 300;
+}
+
 .popup .btn-close {
   display: block;
   width: 48px;
   height: 48px;
   position: absolute;
-  top: 60px;
-  right: 40px;
+  top: 20px;
+  right: 30px;
   z-index: 9999;
   cursor: pointer;
 }
 
-.popup .btn-close::before {
+.popup .btn-close::before, .popup .btn-close::after {
   content: "";
   display: block;
   width: 48px;
@@ -2269,26 +2513,19 @@ footer {
   border: 1px solid #fff;
   border-radius: 10px;
   position: absolute;
+  top: 50%;
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
 }
 
 .popup .btn-close::after {
-  content: "";
-  display: block;
-  width: 48px;
-  height: 3px;
-  background-color: #f4ba1d;
-  border: 1px solid #fff;
-  border-radius: 10px;
-  position: absolute;
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
 }
 
 .content-text {
   width: 100%;
-  height: auto;
+  height: 420px;
   position: relative;
   overflow: hidden;
 }
@@ -2304,7 +2541,9 @@ footer {
 }
 
 .content-table table {
-  width: 100%;
+  width: 95%;
+  max-width: 95%;
+  margin: 0 auto;
 }
 
 .content-table thead {
@@ -2361,12 +2600,22 @@ footer {
   .popup h2 {
     font-size: 2.8rem;
   }
+  .popup .header h5::before, .popup .header h5::after {
+    width: 15%;
+    margin-top: calc((40vw/1024)*100);
+  }
+  .popup .header h5 b {
+    width: 70%;
+  }
   .popup .pop-container {
     width: 90%;
     max-width: 580px;
   }
+  .popup .precautions {
+    padding: 0;
+  }
   .popup .btn-close {
-    top: 40px;
+    top: 10px;
     right: 20px;
   }
   .content-table table {
@@ -2389,17 +2638,43 @@ footer {
     margin-left: initial;
     font-size: 2rem;
   }
+  .popup .header {
+    font-size: 1.6rem;
+  }
+  .popup .header h5::before, .popup .header h5::after {
+    width: 6%;
+    margin-top: calc((40vw / 580)*100);
+  }
+  .popup .header h5 b {
+    width: 88%;
+    top: 0;
+  }
   .popup .btn-close {
     width: 30px;
     height: 30px;
-    top: 25px;
-    right: 10px;
+    top: 4px;
+    right: 6px;
   }
   .popup .btn-close::before, .popup .btn-close::after {
     width: 30px;
   }
   .popup .pop-container {
     padding: 20px;
+  }
+  .popup .pop-container p {
+    padding-left: 90px;
+    font-size: 18px;
+    text-indent: -90px;
+  }
+  .popup .pop-container .text {
+    width: 100%;
+  }
+  .popup .precautions h6 {
+    font-size: 2rem;
+  }
+  .popup .precautions .striped {
+    width: 100%;
+    max-width: 100%;
   }
   .content-text {
     height: calc((700vw / 640)*100);
