@@ -1055,6 +1055,16 @@ h3 {
     border-left: 3px solid $yellow;
     font-size: 1rem;
     font-weight: 300;
+    .par-star{
+      position: relative;
+      padding-left: 15px;
+    }
+    .star{
+      font-size: 24px;
+      position: absolute;
+      top: -3px;
+      left: -4px;
+    }
   }
   ol {
     list-style-type: decimal;

@@ -12,12 +12,12 @@ $(document).ready(function(){
     });
 
     $('.navigation_r ul li').eq(1).find('a').on('click', function(){
-        $('html, body').animate({scrollTop: $('#period').offset().top - 200}, 1000);
+        $('html, body').animate({scrollTop: $('#period').offset().top - 80}, 1000);
         return false;
     });
 
     $('.navigation_r ul li').eq(2).find('a').on('click', function(){
-        $('html, body').animate({scrollTop: $('#pay').offset().top}, 1000);
+        $('html, body').animate({scrollTop: $('#pay').offset().top + 60}, 1000);
         return false;
     });
 
@@ -27,12 +27,12 @@ $(document).ready(function(){
     });
     
     $('.navigation_r ul li').eq(4).find('a').on('click', function(){
-        $('html, body').animate({scrollTop: $('#life').offset().top}, 1000);
+        $('html, body').animate({scrollTop: $('#life').offset().top + 120}, 1000);
         return false;
     });
 
     $('.navigation_r ul li').eq(5).find('a').on('click', function(){
-        $('html, body').animate({scrollTop: $('#app').offset().top}, 1000);
+        $('html, body').animate({scrollTop: $('#app').offset().top - 80}, 1000);
         return false;
     });
 

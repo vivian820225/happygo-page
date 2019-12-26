@@ -27,19 +27,51 @@ $(document).ready(function() {
     }
   });
 
+  //main menu
+  $(".main-menu a").on("click", function() {
+    unchecked();
+  });
+
+  $('.main-menu ul li').eq(1).find('a').on('click', function(){
+    $('html, body').animate({scrollTop: 0}, 800);
+    unchecked();
+  });
+
+  $('.main-menu ul li').eq(2).find('a').on('click', function(){
+    $('html, body').animate({scrollTop: $('#period').offset().top - 80}, 800);
+    unchecked();
+  });
+
+  $('.main-menu ul li').eq(3).find('a').on('click', function(){
+    $('html, body').animate({scrollTop: $('#pay').offset().top + 60}, 800);
+    unchecked();
+  });
+
+  $('.main-menu ul li').eq(4).find('a').on('click', function(){
+    $('html, body').animate({scrollTop: $('#point').offset().top}, 800);
+    unchecked();
+  });
+
+  $('.main-menu ul li').eq(5).find('a').on('click', function(){
+    $('html, body').animate({scrollTop: $('#life').offset().top + 120}, 800);
+    unchecked();
+  });
+
+  $('.main-menu ul li').eq(6).find('a').on('click', function(){
+    $('html, body').animate({scrollTop: $('#app').offset().top - 80}, 800);
+    unchecked();
+  });
+
   // 瀑布流
-  var grid = $('.grid').imagesLoaded( function() {  
-    // init Masonry after all images have loaded  
+  var grid = $(".grid").imagesLoaded(function() {
+    // init Masonry after all images have loaded
     grid.masonry({
-      columnWidth: '.grid-item',
-      itemSelector: '.grid-item',
+      columnWidth: ".grid-item",
+      itemSelector: ".grid-item",
       percentPosition: true
     });
-});
-});
-
-$(".main-menu a").on("click", function() {
-  unchecked();
+  });
+  
 });
 
 var menu = document.getElementById("menu");
@@ -77,7 +109,11 @@ TweenMax.to("#main .container", 0, { alpha: 0, y: 40 });
 
 var controller = new ScrollMagic.Controller();
 
-var tween = new TimelineMax().to(".main-title", 1, { alpha: 1, y: 0, delay: 0.5});
+var tween = new TimelineMax().to(".main-title", 1, {
+  alpha: 1,
+  y: 0,
+  delay: 0.5
+});
 var scene = new ScrollMagic.Scene({
   triggerElement: ".topbar",
   triggerHook: "onCenter",
@@ -86,7 +122,11 @@ var scene = new ScrollMagic.Scene({
   .setTween(tween)
   .addTo(controller);
 
-var tween1 = new TimelineMax().to("#main .container", 1, { alpha: 1, y: 0, delay: 2});
+var tween1 = new TimelineMax().to("#main .container", 1, {
+  alpha: 1,
+  y: 0,
+  delay: 2
+});
 var scene1 = new ScrollMagic.Scene({
   triggerElement: "#main .container",
   triggerHook: "onCenter",
