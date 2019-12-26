@@ -32,35 +32,64 @@ $(document).ready(function() {
     unchecked();
   });
 
-  $('.main-menu ul li').eq(1).find('a').on('click', function(){
-    $('html, body').animate({scrollTop: 0}, 800);
-    unchecked();
-  });
+  if($(window).width() > 580){
+    $('.main-menu ul li').eq(1).find('a').on('click', function(){
+      $('html, body').animate({scrollTop: 0}, 800);
+      unchecked();
+    });
+  
+    $('.main-menu ul li').eq(2).find('a').on('click', function(){
+      $('html, body').animate({scrollTop: $('#period').offset().top - 80}, 800);
+      unchecked();
+    });
+  
+    $('.main-menu ul li').eq(3).find('a').on('click', function(){
+      $('html, body').animate({scrollTop: $('#pay').offset().top + 60}, 800);
+      unchecked();
+    });
+  
+    $('.main-menu ul li').eq(4).find('a').on('click', function(){
+      $('html, body').animate({scrollTop: $('#point').offset().top}, 800);
+      unchecked();
+    });
+  
+    $('.main-menu ul li').eq(5).find('a').on('click', function(){
+      $('html, body').animate({scrollTop: $('#life').offset().top + 120}, 800);
+      unchecked();
+    });
+  
+    $('.main-menu ul li').eq(6).find('a').on('click', function(){
+      $('html, body').animate({scrollTop: $('#app').offset().top - 80}, 800);
+      unchecked();
+    });
+  }else if($(window).width() < 580){
+    $('.main-menu ul li').eq(2).find('a').on('click', function(){
+      $('html, body').animate({scrollTop: $('#period').offset().top - 20}, 800);
+      unchecked();
+    });
+  
+    $('.main-menu ul li').eq(3).find('a').on('click', function(){
+      $('html, body').animate({scrollTop: $('#pay').offset().top}, 800);
+      unchecked();
+    });
+  
+    $('.main-menu ul li').eq(4).find('a').on('click', function(){
+      $('html, body').animate({scrollTop: $('#point').offset().top - 30}, 800);
+      unchecked();
+    });
+  
+    $('.main-menu ul li').eq(5).find('a').on('click', function(){
+      $('html, body').animate({scrollTop: $('#life').offset().top - 10}, 800);
+      unchecked();
+    });
+  
+    $('.main-menu ul li').eq(6).find('a').on('click', function(){
+      $('html, body').animate({scrollTop: $('#app').offset().top - 30}, 800);
+      unchecked();
+    });
 
-  $('.main-menu ul li').eq(2).find('a').on('click', function(){
-    $('html, body').animate({scrollTop: $('#period').offset().top - 80}, 800);
-    unchecked();
-  });
+  }
 
-  $('.main-menu ul li').eq(3).find('a').on('click', function(){
-    $('html, body').animate({scrollTop: $('#pay').offset().top + 60}, 800);
-    unchecked();
-  });
-
-  $('.main-menu ul li').eq(4).find('a').on('click', function(){
-    $('html, body').animate({scrollTop: $('#point').offset().top}, 800);
-    unchecked();
-  });
-
-  $('.main-menu ul li').eq(5).find('a').on('click', function(){
-    $('html, body').animate({scrollTop: $('#life').offset().top + 120}, 800);
-    unchecked();
-  });
-
-  $('.main-menu ul li').eq(6).find('a').on('click', function(){
-    $('html, body').animate({scrollTop: $('#app').offset().top - 80}, 800);
-    unchecked();
-  });
 
   // 瀑布流
   var grid = $(".grid").imagesLoaded(function() {
