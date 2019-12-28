@@ -169,7 +169,7 @@ var scene = new ScrollMagic.Scene({
 var tween1 = new TimelineMax().to("#main .container", 1, {
   alpha: 1,
   y: 0,
-  delay: 1.5
+  delay: 2
 });
 var scene1 = new ScrollMagic.Scene({
   triggerElement: "#main .container",
