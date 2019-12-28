@@ -937,7 +937,7 @@ h3 {
       }
     }
     &.space{
-      padding-bottom: 54px;
+      padding-bottom: 34px;
     }
   }
 
@@ -964,6 +964,10 @@ h3 {
       &.small {
         padding-top: 8px;
         height: 40px;
+      }
+      &.smaller{
+        height: 30px;
+        margin-right: 10px;
       }
       &.big {
         height: 80px;
@@ -1036,11 +1040,12 @@ h3 {
       }
     }
     &.extra{
+      font-size: 2rem;
       p{
         padding-top: 10px;
-        padding-left: 20px;
+        padding-left: 28px;
         font-size: 2rem;
-        text-indent: -20px;
+        text-indent: -28px;
       }
       .light{
         display: block;
@@ -1048,9 +1053,9 @@ h3 {
         font-size: 1rem;
         font-weight: 300;
       }
-      .color{
-        color: $orange;
-      }
+      // .color{
+      //   color: $orange;
+      // }
     }
   }
 
@@ -1063,6 +1068,7 @@ h3 {
     .par-star{
       position: relative;
       padding-left: 15px;
+      font-size: 1rem;
     }
     .star{
       font-size: 24px;

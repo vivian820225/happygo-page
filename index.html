@@ -13,6 +13,7 @@
     <script src="js/TweenMax.min.js"></script>
     <script src="js/TweenLite.min.js"></script>
     <script src="js/ScrollMagic.js"></script>
+    <script src="js/animation.gsap.js"></script>
     <script src="js/imagesloaded.pkgd.min.js"></script>
 </head>
 
@@ -70,20 +71,20 @@
                     </ul>
                     <h6>注意事項</h6>
                     <ol>
-                        <li>1.本活動皆需使用HAPPY GO Pay進行綁卡並刷卡消費累點方可符合資格。</li>
-                        <li>2.本活動適用銀行及卡別：遠東商業銀行、花旗銀行、台新銀行、聯邦銀行、華南銀行、第一銀行、玉山銀行幸運PLUS鈦金卡。</li>
-                        <li>3.本活動適用之發卡組織為Mastercard、VISA、JCB。除上述特別註明之適用卡別外，聯邦銀行不適用商務差旅卡、採購卡、VISA金融卡(Debit Card)
+                        <li>1. 本活動皆需使用HAPPY GO Pay進行綁卡並刷卡消費累點方可符合資格。</li>
+                        <li>2. 本活動適用銀行及卡別：遠東商業銀行、花旗銀行、台新銀行、聯邦銀行、華南銀行、第一銀行、玉山銀行幸運PLUS鈦金卡。</li>
+                        <li>3. 本活動適用之發卡組織為Mastercard、VISA、JCB。除上述特別註明之適用卡別外，聯邦銀行不適用商務差旅卡、採購卡、VISA金融卡(Debit Card)
                             ；台新銀行及花旗銀行不適用簽帳金融卡及商務卡。</li>
-                        <li>4.本活動須有參與HAPPY GO累點之店櫃適用，累點參與櫃位以各店公告為主。</li>
-                        <li>5.本活動之回饋點數採週週入點(遇例假日及國定假日順延)，於完成交易後的隔週五起回饋至該HAPPY GO Pay使用者帳戶。回饋之HAPPY
+                        <li>4. 本活動須有參與HAPPY GO累點之店櫃適用，累點參與櫃位以各店公告為主。</li>
+                        <li>5. 本活動之回饋點數採週週入點(遇例假日及國定假日順延)，於完成交易後的隔週五起回饋至該HAPPY GO Pay使用者帳戶。回饋之HAPPY
                             GO點數，持卡人不得請求退還回饋金、匯款至銀行帳戶、兌換現金、更換其他商品或轉讓予他人。</li>
-                        <li>6.綁定禮每卡限回饋乙次，不重複回饋，須於指定通路以綁定指定銀行及信用卡任刷一筆，方可獲得50點。台新銀行滿額禮/綁定禮/期間限定20倍/SOGO單筆滿千加碼活動1月回饋合計限量100萬點、2月及3月各限量40萬點；花旗銀行滿額禮/綁定禮/期間限定20倍/SOGO單筆滿千加碼活動1月回饋合計限量120萬點、2月及3月各限量40萬點；玉山幸運PLUS鈦金卡滿額禮/綁定禮/期間限定20倍1~3月合計限量100萬點。
+                        <li>6. 綁定禮每卡限回饋乙次，不重複回饋，須於指定通路以綁定指定銀行及信用卡任刷一筆，方可獲得50點。台新銀行滿額禮/綁定禮/期間限定20倍/SOGO單筆滿千加碼活動1月回饋合計限量100萬點、2月及3月各限量40萬點；花旗銀行滿額禮/綁定禮/期間限定20倍/SOGO單筆滿千加碼活動1月回饋合計限量120萬點、2月及3月各限量40萬點；玉山幸運PLUS鈦金卡滿額禮/綁定禮/期間限定20倍1~3月合計限量100萬點。
                         </li>
-                        <li>7.額禮活動期間每卡每日擇優回饋乙次。愛買滿額禮活動滿NT$2,000(含以上)回饋200點項目，花旗銀行限「現金回饋PLUS卡」參加，滿NT$2,000(含以上)回饋300點。台新銀行滿額禮/綁定禮/期間限定20倍/SOGO單筆滿千加碼活動1月回饋合計限量100萬點、2月及3月各限量40萬點；花旗銀行滿額禮/綁定禮/期間限定20倍/SOGO單筆滿千加碼活動1月回饋合計限量120萬點、2月及3月各限量40萬點；聯邦銀行滿額禮/期間限定20倍/SOGO單筆滿千加碼活動1~3月合計限量250萬點；華南銀行滿額禮及期間限定20倍每戶每月回饋合計上限1萬點；玉山幸運PLUS鈦金卡滿額禮/綁定禮/期間限定20倍1~3月合計限量100萬點。
+                        <li>7. 滿額禮活動期間每卡每日擇優回饋乙次。愛買滿額禮活動滿NT$2,000(含以上)回饋200點項目，花旗銀行限「現金回饋PLUS卡」參加，滿NT$2,000(含以上)回饋300點。台新銀行滿額禮/綁定禮/期間限定20倍/SOGO單筆滿千加碼活動1月回饋合計限量100萬點、2月及3月各限量40萬點；花旗銀行滿額禮/綁定禮/期間限定20倍/SOGO單筆滿千加碼活動1月回饋合計限量120萬點、2月及3月各限量40萬點；聯邦銀行滿額禮/期間限定20倍/SOGO單筆滿千加碼活動1~3月合計限量250萬點；華南銀行滿額禮及期間限定20倍每戶每月回饋合計上限1萬點；玉山幸運PLUS鈦金卡滿額禮/綁定禮/期間限定20倍1~3月合計限量100萬點。
                         </li>
-                        <li>8.財鼠報喜期間限定20倍活動，係指各通路活動期間內可享滿額禮共20倍回饋(含原10倍)，並係以該筆消費適用之回饋門檻金額為基礎，計算點數回饋比例，舉例若於指定期間內於遠百消費NT$2,000以上未滿NT$5,000時，即適用NT$2000門檻，可獲得原滿額禮200點及期間加碼200點共400點。台新銀行滿額禮/綁定禮/期間限定20倍/SOGO單筆滿千加碼活動1月回饋合計限量100萬點、2月及3月各限量40萬點；花旗銀行滿額禮/綁定禮/期間限定20倍/SOGO單筆滿千加碼活動1月回饋合計限量120萬點、2月及3月各限量40萬點；聯邦銀行滿額禮/期間限定20倍/SOGO單筆滿千加碼活動1~3月合計限量250萬點；華南銀行滿額禮及期間限定20倍每戶每月回饋合計上限1萬點；玉山幸運PLUS鈦金卡滿額禮/綁定禮/期間限定20倍1~3月合計限量100萬點。
+                        <li>8. 財鼠報喜期間限定20倍活動，係指各通路活動期間內可享滿額禮共20倍回饋(含原10倍)，並係以該筆消費適用之回饋門檻金額為基礎，計算點數回饋比例，舉例若於指定期間內於遠百消費NT$2,000以上未滿NT$5,000時，即適用NT$2000門檻，可獲得原滿額禮200點及期間加碼200點共400點。台新銀行滿額禮/綁定禮/期間限定20倍/SOGO單筆滿千加碼活動1月回饋合計限量100萬點、2月及3月各限量40萬點；花旗銀行滿額禮/綁定禮/期間限定20倍/SOGO單筆滿千加碼活動1月回饋合計限量120萬點、2月及3月各限量40萬點；聯邦銀行滿額禮/期間限定20倍/SOGO單筆滿千加碼活動1~3月合計限量250萬點；華南銀行滿額禮及期間限定20倍每戶每月回饋合計上限1萬點；玉山幸運PLUS鈦金卡滿額禮/綁定禮/期間限定20倍1~3月合計限量100萬點。
                         </li>
-                        <li>9.本活動若有限量回饋以交易時間先後順序計算，如兌換完畢時，活動即終止，恕不個別通知及追加贈點。</li>
+                        <li>9. 本活動若有限量回饋以交易時間先後順序計算，如兌換完畢時，活動即終止，恕不個別通知及追加贈點。</li>
                         <li>10. 活動期間至HAPPY GO點數回饋前，持卡人若於HAPPY GO
                             Pay取消綁卡，或所綁定之卡片有失效、停卡(含信用卡強制停用、申請停用、掛失不補發、到期不續卡)、延滯繳款或未繳納、取消交易或違反信用卡約定條款等情事者，即視為不符合本活動之資格，不予回饋。
                         </li>
@@ -97,8 +98,7 @@
                             Pay：宴會廳(包含婚宴或會議活動)、台北遠飯健身中心會員入會費與月清潔費、線上販售之餐券 (包含官網或其他線上餐券平台) 、預付費用的訂位平台、關企員工美食餐券、信用卡折扣
                             (e.g.下午茶買一送一，須出示實體卡才能享優惠)</li>
                         <li>15. 謹慎理財信用至上各家銀行信用卡循環利息及費用詳見各家銀行官方網站。</li>
-                        <li>16.
-                            主辦單位為鼎鼎聯合行銷（股）有限公司保有活動之解釋、修改、調整、終止等相關權利，其詳細辦法、變更事項或未盡事宜則以網站公告及店內公告為主，詳見快樂購卡網站https://www.happygocard.com.tw或洽HAPPY
+                        <li>16. 主辦單位為鼎鼎聯合行銷（股）有限公司保有活動之解釋、修改、調整、終止等相關權利，其詳細辦法、變更事項或未盡事宜則以網站公告及店內公告為主，詳見快樂購卡網站https://www.happygocard.com.tw或洽HAPPY
                             GO服務專線02-7716-6888，服務時間為週一至週日09:00-18:00。</li>
                     </ol>
                 </div>
@@ -136,8 +136,8 @@
                             <tr>
                                 <td>City'Super</td>
                                 <td>2020/1/10~1/24
-                                    <b>台中大遠百、板橋大遠百、信義遠百、遠東SOGO</b>
-                                    2020/1/10~1/24
+                                    <b>台中大遠百、板橋大遠百、信義遠百</b>
+                                    2020/1/12~1/26
                                     <b>SOGO天母店、SOGO復興館、巨城購物中心</b>
                                 </td>
                             </tr>
@@ -184,25 +184,29 @@
                 <table class="striped">
                     <thead>
                         <tr>
-                            <th>各分店</th>
+                            <th>分店</th>
                             <th>無法使用HAPPY GO Pay 櫃位</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td>寶慶遠百</td>
+                            <td>遠百信義A13</td>
+                            <td>7-11</td>
+                        </tr>
+                        <tr>
+                            <td>遠百寶慶</td>
                             <td>Jasons超市、麥當勞</td>
                         </tr>
                         <tr>
-                            <td>板橋遠百</td>
+                            <td>遠百板橋</td>
                             <td>Jasons超市、麥當勞、湯姆熊</td>
                         </tr>
                         <tr>
-                            <td>板橋大遠百</td>
-                            <td>海底撈、威秀影城、大食代 、Massimo Dutti、丸龜製麵、麥當勞、暐融修改室、Birkenstock勃肯</td>
+                            <td>Mega City<br/>板橋大遠百</td>
+                            <td>海底撈、威秀影城、大食代 、Massimo Dutti、丸龜製麵、麥當勞、暐融修改室、Birkenstock勃肯、遠傳電信</td>
                         </tr>
                         <tr>
-                            <td>桃園遠百</td>
+                            <td>遠百桃園</td>
                             <td>麥當勞、7-11、湯姆熊</td>
                         </tr>
                         <tr>
@@ -210,19 +214,21 @@
                             <td>Jasons超市、海底撈、威秀影城、Massimo Dutti</td>
                         </tr>
                         <tr>
-                            <td>台中大遠百</td>
-                            <td>海底撈、威秀影城、大食代 、Chanel精品、Dior精品、暐融修改室、Marella、iBLUES、麥當勞、7-11、H&M、Pull&Bear</td>
+                            <td>Top City<br/>台中大遠百</td>
+                            <td>海底撈、威秀影城、大食代 、Chanel精品、Dior精品、暐融修改室、Marella、iBLUES、麥當勞、7-11、H&M、Pull&Bear、遠傳電信<br/>
+                                <b class="color">(DIOR(精品)、CHANEL(精品)，可使用HAPPY GO Pay支付，但無法使用HG點數折抵)<b>
+                            </td>
                         </tr>
                         <tr>
-                            <td>嘉義遠百</td>
-                            <td></td>
+                            <td>遠百嘉義</td>
+                            <td>全館皆可使用</td>
                         </tr>
                         <tr>
-                            <td>台南遠百成功店</td>
+                            <td>台南大遠百 成功店</td>
                             <td>麥當勞、湯姆貝貝</td>
                         </tr>
                         <tr>
-                            <td>台南遠百公園店</td>
+                            <td>台南大遠百 公園店</td>
                             <td>威秀影城、湯姆熊、肉多多</td>
                         </tr>
                         <tr>
@@ -230,7 +236,7 @@
                             <td>威秀影城、Bershka、麥當勞、湯姆熊、全家便利商店</td>
                         </tr>
                         <tr>
-                            <td>花蓮遠百</td>
+                            <td>遠百花蓮</td>
                             <td>麥當勞、H&M</td>
                         </tr>
                     </tbody>
@@ -397,7 +403,7 @@
                     <li><a href="#app">立即下載HAPPY GO App</a></li>
                     <li><a href="#main">單筆滿額贈</a></li>
                     <li><a href="#period">財鼠報喜 期間限定</a></li>
-                    <li><a href="#pay">百貨樂Pay 優惠不停</a></li>
+                    <li><a href="#pay">生活樂Pay 優惠不停</a></li>
                     <li><a href="#point">點金雙Pay 方便加倍</a></li>
                     <li><a href="#life">速Pay生活圈</a></li>
                     <li><a href="#app">會員限量專屬優惠</a></li>
@@ -455,7 +461,7 @@
                         </div>
                         <div class="col">
                             <div class="title-block">
-                                <h3>量販</h3>
+                                <h3>愛買量販</h3>
                             </div>
                             <div class="info-block">
                                 <table>
@@ -531,7 +537,7 @@
             <div class="block-bg"><img src="images/tri-bg-1.png" alt=""></div>
             <div class="block-bg-2"><img src="images/tri-bg-1.png" alt=""></div>
             <div class="container">
-                <h2><span>百</span><span>貨</span><span>樂</span><span>Pay</span> <span class="orange">優</span><span
+                <h2><span>生</span><span>活</span><span>樂</span><span>Pay</span> <span class="orange">優</span><span
                         class="orange">惠</span><span class="orange">不</span><span class="orange">停</span></h2>
                 <h4>百貨通路</h4>
                 <div class="wrapper">
@@ -549,30 +555,31 @@
                             <blockquote>
                                 <ol>
                                     <li>每卡每日限領一次/擇一門檻兌換</li>
+                                    <li>點數於消費日後次週五入點</li>
                                 </ol>
                             </blockquote>
                             <hr>
                             <h6>消費抵用券</h6>
                             <p class="box-content">
-                                單筆滿5,000元<span class="circle">贈</span><span class="highlight">200</span>元十足券
+                                單筆滿5,000元<br /><span class="circle">贈</span><span class="highlight">200</span>元十足券乙張
                             </p>
                             <blockquote>
-                                <p class="par-star"><span class="star">*</span> 1/1-4/1全館(含餐飲)十足抵用(部分專櫃除外)</p>
                                 <ol>
+                                    <li>抵用方式1/1-4/1全館(含餐飲)十足抵用(部分專櫃除外)</li>
                                     <li>每人每日限領一次</li>
-                                    <li>使用HAPPY GO Pay需至贈品處兌換</li>
+                                    <li>使用HAPPY GO App需至贈品處兌換</li>
                                 </ol>
                             </blockquote>
                         </div>
                         <div class="col grid-item">
-                            <div class="title-border extra"><img class="small" src="images/logo-FE.png"
+                            <div class="title-border extra"><img class="smaller" src="images/logo-A13.jpg"
                                     alt=""><span>信義<br />A13</span></div>
                             <h6>週週來店禮</h6>
                             <p class="box-content">
-                                1/1起~ 1/8起~ 1/15起~<br />
-                                單筆滿1,000元<br /><span class="circle">贈</span>「HAPPY GO點數<span
+                                1/1, 1/8, 1/15每週起<br />
+                                單筆滿1,000元<span class="circle">贈</span>「HAPPY GO限時點數<span
                                     class="highlight">100</span>點」<br />
-                                <b>(每週限量500份 共1500份)</b>
+                                <b>(每週限量500份 共1,500份)</b>
                             </p>
                             <blockquote>
                                 <ol>
@@ -597,47 +604,55 @@
                         </div>
                         <div class="col grid-item">
                             <div class="title-border"><img class="big" src="images/logo-bigcity.jpg" alt=""></div>
-                            <h6><span class="yellow">週週抽</span>新春發財金<span class="yellow">6,666</span></h6>
-                            <div class="box-content">
-                                <b><span>活動日期 |</span> 2020/1/1-2020/1/31<br />
-                                    <span>活動方式 |</span><br /></b>
-                                <p class="text">
+                            <h6>HAPPY GO Pay 巨城再加碼</h6>
+                            <div class="box-content extra">
+                                活動日期 | 2020/1/25-1/29<br/>
+                                使用巨城App之HAPPY GO Pay消費，<br/>當日單筆滿3,000元<br/><span class="circle">贈</span>巨城購物抵用券<span class="highlight">100</span>元
+                                <!-- <p class="text">
                                     單筆消費滿<span class="color">666</span>元即獲一次抽獎機會，<br />
                                     週週抽出一名，可得新春發財金<span class="color">6,666</span>元，<br />
                                     消費越多，機會越大。(共6名)
-                                </p>
+                                </p> -->
                             </div>
+                            <blockquote>
+                                <p class="par-star"><span class="star">*</span> 每人每日限兌換乙份，限量500份</p>
+                            </blockquote>
                         </div>
 
                         <div class="col grid-item space">
                             <div class="title-border"><img src="images/logo-themall.jpg.png" alt=""></div>
-                            <p class="box-content">
-                                1/18-2/9 使用HAPPY GO Pay<br />
-                                單筆滿2,000元<span class="circle">贈</span><span class="highlight">100</span>點
+                            <p class="box-content extra">
+                                活動日期 | 2020/1/1-1/17<br />
+                                活動方式 |<br />
+                                1. 單筆滿15,000元<span class="circle">贈</span><span class="highlight">500</span>點
                             </p>
                             <blockquote>
-                                <p class="par-star"><span class="star">*</span> 每人每卡限兌換1份，共限量200份</p>
+                                <p class="par-star"><span class="star">*</span> 每人每卡限兌換乙份，限量100份</p>
                             </blockquote>
                             <hr>
-                            <h6>遠企加碼活動</h6>
+                            <h6>新年加碼活動</h6>
                             <div class="box-content extra">
-                                <p>農曆年檔期 2020/1/18(六)~2/9(日)</p>
-                                <p>1.全館使用HAPPY GO PAY單筆滿2,000元<span class="color">送</span>HAPPY GO <span
-                                        class="color">100</span>點</p>
-                                <span class="light">不累送，每人每卡限兌換1份，限量100份。</span>
-                                <p>2.全館使用HAPPY GO PAY單筆滿20,000元 加<span class="color">送</span>HAPPY GO <span
-                                        class="color">1,000</span>點</p>
-                                <span class="light">不累送，每人每卡限兌換1份，限量100份。</span>
+                                活動日期 | 2020/1/18-2/7<br/>
+                                活動方式 |<br/>
+                                <p>1. 單筆滿2,000元<br/><span class="circle">贈</span><span
+                                        class="highlight">100</span>點，限量100份</p>
+                                <p>2. 單筆滿20,000元<br/><span class="circle">贈</span><span
+                                        class="highlight">1,000</span>點，限量10份</p>
+                                <!-- <span class="light">不累送，每人每卡限兌換1份，限量100份。</span> -->
                             </div>
+                            <blockquote>
+                                <p class="par-star"><span class="star">*</span> 限擇一門檻兌換，每人每卡限兌換乙份</p>
+                            </blockquote>
                         </div>
                         <div class="col grid-item">
                             <div class="title-border"><img src="images/logo-citysuper.jpg" alt=""></div>
                             <h6>滿額抵用券</h6>
                             <p class="box-content">
-                                使用HAPPY GO Pay單筆消費<br />
-                                滿5,000元<span class="circle">贈</span><span class="highlight">100</span>元<br />
-                                抵用券1張(十足抵用)
+                                單筆消費滿5,000元<br /><span class="circle">贈</span><span class="highlight">100</span>元十足抵用券乙張
                             </p>
+                            <blockquote>
+                                <p class="par-star"><span class="star">*</span>憑消費發票至city'super服務台兌換</p>
+                            </blockquote>
                         </div>
                     </div>
                     <div class="col extra">
@@ -646,7 +661,7 @@
                             <div class="title-border"><img src="images/logo-FET.jpg" alt=""></div>
                             <h6>月月抽500點</h6>
                             <p class="box-content">
-                                1/1-3/31於直營門市使用<br />HAPPY GO Pay不限金額消費，<br />月月抽<span
+                                直營門市不限金額消費，<br />月月抽<span
                                     class="highlight">500</span>點！<b>(每月限量500名)</b>
                             </p>
                         </div>
@@ -732,7 +747,7 @@
                         <h3>10大通路重磅出擊<br />
                             速Pay你的生活圈</h3>
                         <p>日常生活採買、電信或是逛百貨、吃美食等都能使用HAPPY GO
-                            Pay，讓貼近你的生活圈，方便多一點!</p>
+                            Pay，貼近你的生活圈，方便多一點!</p>
                         <a href="javascript:noAddpMore()" class="link-border">不適用HAPPY GO Pay之櫃位</a>
                     </div>
                     <div class="col map">
